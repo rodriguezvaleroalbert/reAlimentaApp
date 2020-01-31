@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //Se crean los findViewById para enlazar nuestras variables con los componentes del activity_login
+        //Se crean los findViewById para enlazar nuestras variables con los componentes del activity_logi
         mUsername = findViewById(R.id.txtEmail);
         mUserpasswd = findViewById(R.id.txtPass);
         mLogin = findViewById(R.id.btnLogin);
