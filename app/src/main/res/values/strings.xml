@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">m7t1</string>
+    <string name="title_activity_nav">Nav</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Tiendas</string>
+    <string name="menu_slideshow">Formulario</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_placeholder">Títol</string>
+    <string name="news_placeholder">Notícies</string>
+    <string name="sports_info_placeholder">Informació</string>
+    <string name="trato">¿Que trato te suelen dar?</string>
+    <string name="procedencia">Eleccion de lugares de procedencia de alimentos:</string>
+    <string name="guardar">Guardar</string>
+    <string name="fruteria">Fruteria</string>
+    <string name="panaderia">Panaderia</string>
+    <string name="supermercado">Supermercado</string>
+    <string name="preguntas_frecuentes">Preguntas frecuentes:</string>
+    <string name="mal_trato">Mal trato</string>
+    <string name="hombre_mujer">Hombre/Mujer</string>
+    <string name="sexo">Sexo:</string>
+    <string name="buen_trato">Buen trato</string>
+
+    <string-array name="indrets_nom">
+        <item>Indret 1</item>
+        <item>Indret 2</item>
+        <item>Indret 3</item>
+        <item>Indret 4</item>
+    </string-array>
+
+    <string-array name="indrets_info">
+        <item>info 1</item>
+        <item>info 2</item>
+        <item>info 3</item>
+        <item>info 4</item>
+    </string-array>
+
+</resources>
