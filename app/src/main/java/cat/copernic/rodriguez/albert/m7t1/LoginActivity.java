@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    //Proba
+    //Prob
     //Creamos las variables para los textos y los botones
     private EditText mUsername, mUserpasswd;
     private Button mLogin, mRegisterBtn;
