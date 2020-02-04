@@ -12,10 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    //Probañ
     //Creamos las variables para los textos y los botones
     private EditText mUsername, mUserpasswd;
-    private Button mLogin, mRegisterBtn;
 
     //Creamos las variables para los Strings
     String Name, Password;
@@ -30,29 +28,28 @@ public class LoginActivity extends AppCompatActivity {
     public static final String PREFERENCE = "preference";
     public static final String PREF_NAME = "name";
     public static final String PREF_PASSWD = "passwd";
-    public static final String PREF_SKIP_LOGIN = "skip_login";
+    //public static final String PREF_SKIP_LOGIN = "skip_login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //Prueba
+
         //Se crean los findViewById para enlazar nuestras variables con los componentes del activity_logi
         mUsername = findViewById(R.id.txtEmail);
         mUserpasswd = findViewById(R.id.txtPass);
-        mLogin = findViewById(R.id.btnLogin);
-        mRegisterBtn = findViewById(R.id.btnRegistrar);
+        Button mLogin = findViewById(R.id.btnLogin);
+        Button mRegisterBtn = findViewById(R.id.btnRegistrar);
 
         //Crea un objecto de preferencias. ("Datos", es el nombre del archivo de preferencias, "MODE_PRIVATE", es para que otras aplicaciones no puedan acceder al archivo XML de preferencias)
         mSharedPreferences = getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE); //O getDefaultSharedPreferences(getApplicationContext()
 
-
         //Saltarte login
-        if (mSharedPreferences.contains(PREF_SKIP_LOGIN)) {
+        /*if (mSharedPreferences.contains(PREF_SKIP_LOGIN)) {
             Intent intent = new Intent(LoginActivity.this, Nav.class);
             startActivity(intent);
             finish();
-        } else  {
+        } else  */{
 
             //Fer login
             mLogin.setOnClickListener(new View.OnClickListener() {
@@ -81,30 +78,20 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
 
-
         }
 
-        //Fer registre
+        //Anar al registre
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (validUserData()) {
-                //Name = mUsername.getText().toString().trim();
-                //Password = mUserpasswd.getText().toString().trim();
-                    SharedPreferences.Editor mEditor = mSharedPreferences.edit();
-                    mEditor.putString(PREF_NAME, String.valueOf(Name));
-                    mEditor.putString(PREF_PASSWD, String.valueOf(Password));
-                    mEditor.putBoolean(PREF_SKIP_LOGIN, true);
-                    mEditor.apply();
-                    Toast.makeText(getApplicationContext(), "REGISTRAT", Toast.LENGTH_SHORT).show();
-                    //finish();
-                } else {
-                    Toast.makeText(getApplicationContext(), "RegBUIIIIT", Toast.LENGTH_SHORT).show();
-                }
+                Intent intent = new Intent(LoginActivity.this, RegistreActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
 
+    //Validar que els camps no estiguin buits
     private boolean validUserData() {
         Name = mUsername.getText().toString().trim();
         Password = mUserpasswd.getText().toString().trim();
