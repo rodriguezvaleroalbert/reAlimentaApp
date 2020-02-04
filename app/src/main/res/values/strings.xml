@@ -47,6 +47,7 @@
     <string name="descriptionGoogle">Logo Google</string>
     <string name="descriptionFacebook">Logo Facebook</string>
     <string name="descriptionTwitter">Logo Twitter</string>
+    <string name="communicate">Communica</string>
     <!-- Nom indrets -->
     <string-array name="indrets_nom">
         <item>Indret 1</item>
