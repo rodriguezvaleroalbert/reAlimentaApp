@@ -57,20 +57,24 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (validUserData()) {
-                        //Name = mUsername.getText().toString().trim();
-                        //Password = mUserpasswd.getText().toString().trim();
-                        if (mSharedPreferences.contains(PREF_NAME)) {
-                            uName = mSharedPreferences.getString(PREF_NAME, "");
-                        }
-                        if (mSharedPreferences.contains(PREF_PASSWD)) {
-                            uPassword = mSharedPreferences.getString(PREF_PASSWD, "");
-                        }
-                        if (Name.equals(uName) && Password.equals(uPassword)) {
-                            Intent intent = new Intent(LoginActivity.this, Nav.class);
-                            startActivity(intent);
-                            finish();
+                        if (isEmailValid(Name)) {
+                            //Name = mUsername.getText().toString().trim();
+                            //Password = mUserpasswd.getText().toString().trim();
+                            if (mSharedPreferences.contains(PREF_NAME)) {
+                                uName = mSharedPreferences.getString(PREF_NAME, "");
+                            }
+                            if (mSharedPreferences.contains(PREF_PASSWD)) {
+                                uPassword = mSharedPreferences.getString(PREF_PASSWD, "");
+                            }
+                            if (Name.equals(uName) && Password.equals(uPassword)) {
+                                Intent intent = new Intent(LoginActivity.this, Nav.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                Toast.makeText(getApplicationContext(), R.string.incorrecte, Toast.LENGTH_SHORT).show();
+                            }
                         } else {
-                            Toast.makeText(getApplicationContext(), R.string.incorrecte, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.notEmail, Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         Toast.makeText(getApplicationContext(), R.string.buit, Toast.LENGTH_SHORT).show();
@@ -96,5 +100,9 @@ public class LoginActivity extends AppCompatActivity {
         Name = mUsername.getText().toString().trim();
         Password = mUserpasswd.getText().toString().trim();
         return !(mUsername.getText().toString().isEmpty() || mUserpasswd.getText().toString().isEmpty());
+    }
+
+    boolean isEmailValid(CharSequence email) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

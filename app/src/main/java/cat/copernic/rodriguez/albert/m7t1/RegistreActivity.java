@@ -52,6 +52,8 @@ public class RegistreActivity extends AppCompatActivity {
                         Intent intent = new Intent(RegistreActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(), R.string.notEmail, Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(getApplicationContext(), R.string.buit, Toast.LENGTH_SHORT).show();
