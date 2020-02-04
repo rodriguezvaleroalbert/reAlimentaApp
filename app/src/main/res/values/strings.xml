@@ -1,60 +1,64 @@
 <resources>
-    <string name="app_name">m7t1</string>
-    <string name="title_activity_nav">Nav</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- Nom de l'app -->
+    <string name="app_name">reAlimenta</string>
+    <!-- Navigation bar -->
+    <string name="title_activity_nav">Apartats</string>
+    <string name="navigation_drawer_open">Obre navigation drawer</string>
+    <string name="navigation_drawer_close">Tanca navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
+    <string name="action_settings">Opcions</string>
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Tiendas</string>
-    <string name="menu_slideshow">Formulario</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_gallery">Botigues</string>
+    <string name="menu_slideshow">Formulari</string>
+    <string name="menu_tools">Eines</string>
+    <string name="menu_share">Comparteix</string>
+    <string name="menu_send">Envia</string>
     <string name="title_placeholder">Títol</string>
     <string name="news_placeholder">Notícies</string>
     <string name="sports_info_placeholder">Informació</string>
-    <string name="trato">¿Que trato te suelen dar?</string>
-    <string name="procedencia">Eleccion de lugares de procedencia de alimentos:</string>
+    <!-- Formulari -->
+    <string name="trato">Quin tracte et solen donar?</string>
+    <string name="procedencia">Elecció dels llocs de procedència dels aliments:</string>
     <string name="guardar">Guardar</string>
-    <string name="fruteria">Fruteria</string>
-    <string name="panaderia">Panaderia</string>
-    <string name="supermercado">Supermercado</string>
-    <string name="preguntas_frecuentes">Preguntas frecuentes:</string>
-    <string name="mal_trato">Mal trato</string>
-    <string name="hombre_mujer">Hombre/Mujer</string>
-    <string name="sexo">Sexo:</string>
-    <string name="buen_trato">Buen trato</string>
-    <string name="descriptionLogo">Logo de l\'aplicació</string>
-    <string name="descriptionEmail">Introdueix el teu email per fer login</string>
-    <string name="descriptionPassword">Introdueix la contrasenya per fer login</string>
-    <string name="descriptionLogin">Fer login</string>
+    <string name="fruteria">Fruiteria</string>
+    <string name="panaderia">Forn de pa</string>
+    <string name="supermercado">Supermercat</string>
+    <string name="preguntas_frecuentes">Preguntes freqüents:</string>
+    <string name="mal_trato">Tracte dolent</string>
+    <string name="hombre_mujer">Home/Dona</string>
+    <string name="sexo">Gènere:</string>
+    <string name="buen_trato">Bon tracte</string>
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="registre">Registre</string>
+    <string name="descriptionActivity_login">Aquest és l\'apartat de login</string>
+    <string name="descriptionLogin">Fer login amb les dades introduïdes</string>
+    <string name="descriptionRegistre">Anar al registre</string>
+    <!-- Registre -->
+    <string name="registrar">Registra\'t</string>
+    <string name="descriptionActivity_registre">Aquest és l\'apartat de registre</string>
     <string name="descriptionRegistrar">Registra\'t</string>
+    <!-- Login i Registre -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="descriptionLogo">Logo de l\'aplicació</string>
     <string name="descriptionGoogle">Logo Google</string>
     <string name="descriptionFacebook">Logo Facebook</string>
     <string name="descriptionTwitter">Logo Twitter</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
-    <string name="registrar">Registra\'t</string>
-    <string name="registre">Registre</string>
-    <string name="descriptionRegistre">Anaral registre</string>
-
+    <!-- Nom indrets -->
     <string-array name="indrets_nom">
         <item>Indret 1</item>
         <item>Indret 2</item>
         <item>Indret 3</item>
         <item>Indret 4</item>
     </string-array>
-
+    <!-- Info indrets -->
     <string-array name="indrets_info">
         <item>info 1</item>
         <item>info 2</item>
         <item>info 3</item>
         <item>info 4</item>
     </string-array>
-
 </resources>

@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         //Crea un objecto de preferencias. ("Datos", es el nombre del archivo de preferencias, "MODE_PRIVATE", es para que otras aplicaciones no puedan acceder al archivo XML de preferencias)
         mSharedPreferences = getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE); //O getDefaultSharedPreferences(getApplicationContext()
 
-        //Saltarte login
+        //Saltarse login
         /*if (mSharedPreferences.contains(PREF_SKIP_LOGIN)) {
             Intent intent = new Intent(LoginActivity.this, Nav.class);
             startActivity(intent);
@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
-                            Toast.makeText(getApplicationContext(), "Credencials incorrectes !!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Usuari i/o contrasenya incorrectes !!", Toast.LENGTH_SHORT).show();
                         }
                     }
                         else {
