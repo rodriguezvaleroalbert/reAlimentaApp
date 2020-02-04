@@ -49,31 +49,31 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, Nav.class);
             startActivity(intent);
             finish();
-        } else  */{
+        } else  */
+        {
 
             //Fer login
             mLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (validUserData()) {
-                    //Name = mUsername.getText().toString().trim();
-                    //Password = mUserpasswd.getText().toString().trim();
-                    if(mSharedPreferences.contains(PREF_NAME)) {
-                        uName = mSharedPreferences.getString(PREF_NAME, "");
+                        //Name = mUsername.getText().toString().trim();
+                        //Password = mUserpasswd.getText().toString().trim();
+                        if (mSharedPreferences.contains(PREF_NAME)) {
+                            uName = mSharedPreferences.getString(PREF_NAME, "");
                         }
-                    if(mSharedPreferences.contains(PREF_PASSWD)){
-                        uPassword = mSharedPreferences.getString(PREF_PASSWD, "");
-                    }
-                    if(Name.equals(uName) && Password.equals(uPassword)){
-                        Intent intent = new Intent(LoginActivity.this, Nav.class);
-                        startActivity(intent);
-                        finish();
+                        if (mSharedPreferences.contains(PREF_PASSWD)) {
+                            uPassword = mSharedPreferences.getString(PREF_PASSWD, "");
+                        }
+                        if (Name.equals(uName) && Password.equals(uPassword)) {
+                            Intent intent = new Intent(LoginActivity.this, Nav.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(getApplicationContext(), R.string.incorrecte, Toast.LENGTH_SHORT).show();
+                        }
                     } else {
-                            Toast.makeText(getApplicationContext(), "Usuari i/o contrasenya incorrectes !!", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                        else {
-                        Toast.makeText(getApplicationContext(), "ESTAA BUIIIT !!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), R.string.buit, Toast.LENGTH_SHORT).show();
                     }
                 }
             });

@@ -18,9 +18,6 @@ public class RegistreActivity extends AppCompatActivity {
     //Creamos las variables para los Strings
     String Name, Password;
 
-    //Creamos las variables para la consulta en las SharedPreferences
-    String uName, uPassword;
-
     //Creamos la variable de preferencias
     private SharedPreferences mSharedPreferences;
 
@@ -46,16 +43,18 @@ public class RegistreActivity extends AppCompatActivity {
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (validUserData()) {
-                    SharedPreferences.Editor mEditor = mSharedPreferences.edit();
-                    mEditor.putString(PREF_NAME, String.valueOf(Name));
-                    mEditor.putString(PREF_PASSWD, String.valueOf(Password));
-                    mEditor.apply();
-                    Toast.makeText(getApplicationContext(), "REGISTRAT", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegistreActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
+                    if (isEmailValid(Name)) {
+                        SharedPreferences.Editor mEditor = mSharedPreferences.edit();
+                        mEditor.putString(PREF_NAME, String.valueOf(Name));
+                        mEditor.putString(PREF_PASSWD, String.valueOf(Password));
+                        mEditor.apply();
+                        Toast.makeText(getApplicationContext(), R.string.regCorrrecte, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RegistreActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
                 } else {
-                    Toast.makeText(getApplicationContext(), "RegBUIIIIT", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.buit, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -65,6 +64,10 @@ public class RegistreActivity extends AppCompatActivity {
         Name = mUsername.getText().toString().trim();
         Password = mUserpasswd.getText().toString().trim();
         return !(mUsername.getText().toString().isEmpty() || mUserpasswd.getText().toString().isEmpty());
+    }
+
+    boolean isEmailValid(CharSequence email) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
 
