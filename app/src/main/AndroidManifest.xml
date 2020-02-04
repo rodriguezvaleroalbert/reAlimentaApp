@@ -30,8 +30,7 @@
             android:name=".Nav"
             android:label="@string/title_activity_nav"
             android:theme="@style/NoActionBar">
-            
+
         </activity>
     </application>
-
 </manifest>
