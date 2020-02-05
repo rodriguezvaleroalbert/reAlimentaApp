@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundFosc"
     android:contentDescription="@string/descriptionActivity_login"
     tools:context=".LoginActivity">
 
@@ -87,7 +86,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <ImageButton
-        android:id="@+id/imgGoogle"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
@@ -114,7 +112,6 @@
         app:srcCompat="@drawable/facebook" />
 
     <ImageButton
-        android:id="@+id/imgTwitter"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"

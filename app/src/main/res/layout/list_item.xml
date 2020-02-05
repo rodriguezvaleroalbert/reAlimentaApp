@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="@string/title_placeholder"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+             />
 
         <TextView
             android:id="@+id/newsTitle"

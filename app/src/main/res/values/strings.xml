@@ -3,8 +3,6 @@
     <string name="app_name">reAlimenta</string>
     <!-- Navigation bar -->
     <string name="title_activity_nav">Apartats</string>
-    <string name="navigation_drawer_open">Obre navigation drawer</string>
-    <string name="navigation_drawer_close">Tanca navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>

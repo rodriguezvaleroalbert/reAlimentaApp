@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     public static final String PREFERENCE = "preference";
     public static final String PREF_NAME = "name";
     public static final String PREF_PASSWD = "passwd";
-    //public static final String PREF_SKIP_LOGIN = "skip_login";
+    public static final String PREF_SKIP_LOGIN = "skip_login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +45,11 @@ public class LoginActivity extends AppCompatActivity {
         mSharedPreferences = getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE); //O getDefaultSharedPreferences(getApplicationContext()
 
         //Saltarse login
-        /*if (mSharedPreferences.contains(PREF_SKIP_LOGIN)) {
+        if (mSharedPreferences.contains(PREF_SKIP_LOGIN)) {
             Intent intent = new Intent(LoginActivity.this, Nav.class);
             startActivity(intent);
             finish();
-        } else  */
+        } else
         {
 
             //Fer login

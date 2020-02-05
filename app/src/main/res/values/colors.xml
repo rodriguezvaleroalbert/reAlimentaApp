@@ -2,10 +2,5 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="colorBack">#FFFFFF</color>
-
-    <color name="EditTextFosc">#008577</color>
-    <color name="backgroundFosc">#202732</color>
 
 </resources>

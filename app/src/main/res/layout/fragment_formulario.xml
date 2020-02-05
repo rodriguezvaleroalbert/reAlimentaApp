@@ -26,7 +26,6 @@
         app:layout_constraintTop_toBottomOf="@+id/text_slideshow" />
 
     <Button
-        android:id="@+id/btn_guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
@@ -38,7 +37,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
@@ -49,7 +47,6 @@
         app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
     <CheckBox
-        android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
@@ -60,7 +57,6 @@
         app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
@@ -71,7 +67,6 @@
         app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
     <RadioButton
-        android:id="@+id/radioButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
@@ -124,7 +119,6 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <Switch
-        android:id="@+id/eSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
@@ -135,7 +129,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txtEti"
         android:layout_width="79dp"
         android:layout_height="26dp"
         android:layout_marginTop="60dp"
