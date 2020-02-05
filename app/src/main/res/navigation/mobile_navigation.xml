@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="cat.copernic.rodriguez.albert.m7t1.ui.Formulario.FormularioFragment"
+        android:name="cat.copernic.rodriguez.albert.m7t1.ui.formulario.FormularioFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 

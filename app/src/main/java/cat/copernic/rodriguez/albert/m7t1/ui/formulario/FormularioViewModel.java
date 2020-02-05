@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.ui.Formulario;
+package cat.copernic.rodriguez.albert.m7t1.ui.formulario;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -10,7 +10,7 @@ public class FormularioViewModel extends ViewModel {
 
     public FormularioViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Formulario fragment");
+        mText.setValue("This is formulario fragment");
     }
 
     public LiveData<String> getText() {

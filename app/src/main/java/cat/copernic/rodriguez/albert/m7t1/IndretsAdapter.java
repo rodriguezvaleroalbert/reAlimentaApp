@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class IndretsAdapter extends RecyclerView.Adapter<IndretsAdapter.ViewHolder> {
 
     //Member variables
-    private ArrayList<Indret> mIndretsData;
+    private final ArrayList<Indret> mIndretsData;
     private Context mContext;
 
     //Constructor
@@ -25,8 +26,9 @@ public class IndretsAdapter extends RecyclerView.Adapter<IndretsAdapter.ViewHold
 
     //Necessari per crear el ViewHolder
     //Fa falta crear list_item
+    @NonNull
     @Override
-    public IndretsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public IndretsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.list_item, parent, false));
     }
 
@@ -58,8 +60,8 @@ public class IndretsAdapter extends RecyclerView.Adapter<IndretsAdapter.ViewHold
             super(itemView);
 
             //Inicialitzar les Views
-            mNomText = (TextView) itemView.findViewById(R.id.title);
-            mInfoText = (TextView) itemView.findViewById(R.id.subTitle);
+            mNomText = itemView.findViewById(R.id.title);
+            mInfoText = itemView.findViewById(R.id.subTitle);
 
             //Establir el onClickListener a tota la vista
             //itemView.setOnClickListener(this);
