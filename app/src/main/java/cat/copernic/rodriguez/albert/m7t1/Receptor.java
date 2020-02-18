@@ -2,21 +2,13 @@ package cat.copernic.rodriguez.albert.m7t1;
 
 import androidx.annotation.NonNull;
 
-public class Receptor {
+public class Receptor extends Usuari{
 
-    private int idUsuari;
     private String nomReceptor;
 
-    public Receptor(String nomReceptor) {
+    public Receptor(String mailUsuari, String contrasenyaUsuari, int tipusUsuari, String nomReceptor) {
+        super(mailUsuari, contrasenyaUsuari, tipusUsuari);
         this.nomReceptor = nomReceptor;
-    }
-
-    public int getIdUsuari() {
-        return idUsuari;
-    }
-
-    public void setIdUsuari(int idUsuari) {
-        this.idUsuari = idUsuari;
     }
 
     public String getNomReceptor() {
@@ -31,7 +23,6 @@ public class Receptor {
     @Override
     public String toString() {
         return "Receptor{" +
-                "idUsuari=" + idUsuari +
                 ", nomReceptor='" + nomReceptor + '\'' +
                 '}';
     }

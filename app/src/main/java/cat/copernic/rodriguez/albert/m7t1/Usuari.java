@@ -1,3 +1,5 @@
+package cat.copernic.rodriguez.albert.m7t1;
+
 import androidx.annotation.NonNull;
 
 public abstract class Usuari {
@@ -6,7 +8,7 @@ public abstract class Usuari {
     private String contrasenyaUsuari;
     private int tipusUsuari;
 
-    public Usuari(String mailUsuari, String contrasenyaUsuari, int tipusUsuari) {
+    Usuari(String mailUsuari, String contrasenyaUsuari, int tipusUsuari) {
         this.mailUsuari = mailUsuari;
         this.contrasenyaUsuari = contrasenyaUsuari;
         this.tipusUsuari = tipusUsuari;
@@ -47,7 +49,7 @@ public abstract class Usuari {
     @NonNull
     @Override
     public String toString() {
-        return "Usuari{" +
+        return "cat.copernic.rodriguez.albert.m7t1.Usuari{" +
                 "idUsuari=" + idUsuari +
                 ", mailUsuari='" + mailUsuari + '\'' +
                 ", contrasenyaUsuari='" + contrasenyaUsuari + '\'' +
