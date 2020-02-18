@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">reAlimenta</string>
+    <string name="action_settings">Opciones</string>
+    <string name="buen_trato">Buen trato</string>
+    <string name="buit">Error, faltan introducir algśn campo</string>
+    <string name="communicate">Comunica</string>
+    <string name="descriptionActivity_login">Éste es el apartado de login</string>
+    <string name="descriptionActivity_registre">Éste es el apartado de registro</string>
+    <string name="descriptionFacebook">Logo Facebook</string>
+    <string name="descriptionGoogle">Logo Google</string>
+    <string name="descriptionLogin">Hacer login con los datos introducidos</string>
+    <string name="descriptionLogo">Logo de la aplicación</string>
+    <string name="descriptionRegistrar">Regístrate</string>
+    <string name="descriptionRegistre">Ir al registro</string>
+    <string name="descriptionTwitter">Logo Twitter</string>
+    <string name="email">Email</string>
+    <string name="fruteria">Fruteria</string>
+    <string name="guardar">Guardar</string>
+    <string name="hombre_mujer">Hombre/Mujer</string>
+    <string name="incorrecte">Usuario y/o contraseña incorrectos</string>
+    <string name="mal_trato">Mal trato</string>
+    <string name="menu_gallery">Tiendas</string>
+    <string name="menu_send">Envía</string>
+    <string name="menu_share">Comparte</string>
+    <string name="menu_slideshow">Formulario</string>
+    <string name="menu_tools">Herramientas</string>
+    <string name="news_placeholder">Noticias</string>
+    <string name="notEmail">La dirección introducida no es un email</string>
+    <string name="panaderia">Panadería</string>
+    <string name="password">Contraseña</string>
+    <string name="procedencia">Elección de los sitios de procedencia de la comida</string>
+    <string name="regCorrrecte">Registro correcto</string>
+    <string name="registrar">Regístrate</string>
+    <string name="registre">Registro</string>
+    <string name="sexo">Género</string>
+    <string name="sports_info_placeholder">Información</string>
+    <string name="supermercado">Supermercado</string>
+    <string name="title_activity_nav">Secciones</string>
+    <string name="title_placeholder">Título</string>
+    <string name="trato">Que trato te suelen dar</string>
+</resources>

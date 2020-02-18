@@ -2,10 +2,6 @@
 
     <!-- Base application theme. -->
 
-    <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar" />
-
-    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

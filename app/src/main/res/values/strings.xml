@@ -3,11 +3,8 @@
     <string name="app_name">reAlimenta</string>
     <!-- Navigation bar -->
     <string name="title_activity_nav">Apartats</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Opcions</string>
-    <string name="menu_home">Home</string>
+    <string name="menu_home" translatable="false">Home</string>
     <string name="menu_gallery">Botigues</string>
     <string name="menu_slideshow">Formulari</string>
     <string name="menu_tools">Eines</string>
@@ -23,13 +20,13 @@
     <string name="fruteria">Fruiteria</string>
     <string name="panaderia">Forn de pa</string>
     <string name="supermercado">Supermercat</string>
-    <string name="preguntas_frecuentes">Preguntes freqüents:</string>
+    <string name="preguntas_frecuentes" translatable="false">FAQs</string>
     <string name="mal_trato">Tracte dolent</string>
     <string name="hombre_mujer">Home/Dona</string>
     <string name="sexo">Gènere:</string>
     <string name="buen_trato">Bon tracte</string>
     <!-- Login -->
-    <string name="login">Login</string>
+    <string name="login" translatable="false">Login</string>
     <string name="registre">Registre</string>
     <string name="descriptionActivity_login">Aquest és l\'apartat de login</string>
     <string name="descriptionLogin">Fer login amb les dades introduïdes</string>
@@ -40,12 +37,12 @@
     <string name="descriptionRegistrar">Registra\'t</string>
     <!-- Login i Registre -->
     <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="password">Contrasenya</string>
     <string name="descriptionLogo">Logo de l\'aplicació</string>
     <string name="descriptionGoogle">Logo Google</string>
     <string name="descriptionFacebook">Logo Facebook</string>
     <string name="descriptionTwitter">Logo Twitter</string>
-    <string name="communicate">Communica</string>
+    <string name="communicate">Comunica</string>
     <!-- Missatges login i registre -->
     <string name="incorrecte">Usuari i/o contrasenya incorrectes !!</string>
     <string name="buit">Error, falta omplir algun camp</string>

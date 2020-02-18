@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">reFeed</string>
+    <string name="action_settings">Options</string>
+    <string name="buen_trato">Good deal</string>
+    <string name="buit">Error, some fields are missing</string>
+    <string name="communicate">Comunicate</string>
+    <string name="descriptionActivity_login">This is the login section</string>
+    <string name="descriptionActivity_registre">This is the register section</string>
+    <string name="descriptionFacebook">Facebook logo</string>
+    <string name="descriptionGoogle">Google logo</string>
+    <string name="descriptionLogin">Do login with the data entered</string>
+    <string name="descriptionLogo">App logo</string>
+    <string name="descriptionRegistrar">Sign up</string>
+    <string name="descriptionRegistre">Go to register</string>
+    <string name="descriptionTwitter">Twitter logo</string>
+    <string name="email">Mail</string>
+    <string name="fruteria">fruit shop</string>
+    <string name="guardar">Save</string>
+    <string name="hombre_mujer">Men/Woman</string>
+    <string name="incorrecte">Incorrect user and/or password</string>
+    <string name="mal_trato">Bad deal</string>
+    <string name="menu_gallery">Shops</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_slideshow">Form</string>
+    <string name="menu_tools">Tools</string>
+    <string name="news_placeholder">News</string>
+    <string name="notEmail">The address entered is not an email.</string>
+    <string name="panaderia">Bakery</string>
+    <string name="password">Password</string>
+    <string name="procedencia">Choosing places where food comes from</string>
+    <string name="regCorrrecte">Correct register</string>
+    <string name="registrar">Sign up</string>
+    <string name="registre">Register</string>
+    <string name="sexo">Genre</string>
+    <string name="sports_info_placeholder">Info</string>
+    <string name="supermercado">Supermarket</string>
+    <string name="title_activity_nav">Sections</string>
+    <string name="title_placeholder">Title</string>
+    <string name="trato">What treatment do you usually get?</string>
+</resources>
