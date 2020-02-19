@@ -20,11 +20,11 @@
     <string name="hombre_mujer">Men/Woman</string>
     <string name="incorrecte">Incorrect user and/or password</string>
     <string name="mal_trato">Bad deal</string>
-    <string name="menu_gallery">Shops</string>
-    <string name="menu_send">Send</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_slideshow">Form</string>
-    <string name="menu_tools">Tools</string>
+    <string name="Botigues">Shops</string>
+    <string name="Envia">Send</string>
+    <string name="Comparteix">Share</string>
+    <string name="Formulari">Form</string>
+    <string name="Eines">Tools</string>
     <string name="news_placeholder">News</string>
     <string name="notEmail">The address entered is not an email.</string>
     <string name="panaderia">Bakery</string>
@@ -39,4 +39,13 @@
     <string name="title_activity_nav">Sections</string>
     <string name="title_placeholder">Title</string>
     <string name="trato">What treatment do you usually get?</string>
+    <string name="Ofertes">Offers</string>
+    <string name="descripci">Description</string>
+    <string name="enrere">Back</string>
+    <string name="galeria">Gallery</string>
+    <string name="send">Send</string>
+    <string name="share">Share</string>
+    <string name="title_oferta_concreta">Detail offer</string>
+    <string name="tools">Tools</string>
+    <string name="t_tol">Title</string>
 </resources>

@@ -7,37 +7,43 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="cat.copernic.rodriguez.albert.m7t1.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes.OfertesFragment"
+        android:label="@string/Ofertes"
+        tools:layout="@layout/fragment_ofertes" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="cat.copernic.rodriguez.albert.m7t1.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.botigues.BotiguesFragment"
+        android:label="@string/Botigues"
+        tools:layout="@layout/fragment_botigues" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="cat.copernic.rodriguez.albert.m7t1.ui.formulario.FormularioFragment"
-        android:label="@string/menu_slideshow"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.formulari.FormularioFragment"
+        android:label="@string/Formulari"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="cat.copernic.rodriguez.albert.m7t1.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.tools.ToolsFragment"
+        android:label="@string/Eines"
         tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="cat.copernic.rodriguez.albert.m7t1.ui.share.ShareFragment"
-        android:label="@string/menu_share"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.share.ShareFragment"
+        android:label="@string/Comparteix"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="cat.copernic.rodriguez.albert.m7t1.ui.send.SendFragment"
-        android:label="@string/menu_send"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.send.SendFragment"
+        android:label="@string/Envia"
         tools:layout="@layout/fragment_send" />
+
+    <fragment
+        android:id="@+id/nav_concreta_idea"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes.OfertaConcreta"
+        android:label="Concreta"
+        tools:layout="@layout/concreta_oferta" />
 </navigation>

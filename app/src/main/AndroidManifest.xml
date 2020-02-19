@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".LoginActivity"
+            android:name=".login_registre.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegistreActivity"
+            android:name=".login_registre.RegistreActivity"
             android:label="@string/registre"
             android:theme="@style/Theme.AppCompat.NoActionBar">
 
@@ -32,5 +32,9 @@
             android:theme="@style/Theme.Design.Light.NoActionBar">
 
         </activity>
+        <activity
+            android:name=".apartats_receptor.ofertes.OfertaConcreta"
+            android:label="@string/title_oferta_concreta"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
     </application>
 </manifest>

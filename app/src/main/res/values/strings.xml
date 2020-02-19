@@ -4,12 +4,12 @@
     <!-- Navigation bar -->
     <string name="title_activity_nav">Apartats</string>
     <string name="action_settings">Opcions</string>
-    <string name="menu_home" translatable="false">Home</string>
-    <string name="menu_gallery">Botigues</string>
-    <string name="menu_slideshow">Formulari</string>
-    <string name="menu_tools">Eines</string>
-    <string name="menu_share">Comparteix</string>
-    <string name="menu_send">Envia</string>
+    <string name="Ofertes">Ofertes</string>
+    <string name="Botigues">Botigues</string>
+    <string name="Formulari">Formulari</string>
+    <string name="Eines">Eines</string>
+    <string name="Comparteix">Comparteix</string>
+    <string name="Envia">Envia</string>
     <string name="title_placeholder">Títol</string>
     <string name="news_placeholder">Notícies</string>
     <string name="sports_info_placeholder">Informació</string>
@@ -48,18 +48,27 @@
     <string name="buit">Error, falta omplir algun camp</string>
     <string name="regCorrrecte">Registre correcte</string>
     <string name="notEmail">L\'adreça introduïda no és un email</string>
+    <string name="title_oferta_concreta">Oferta Concreta</string>
+    <string name="enrere">Enrere</string>
+    <string name="galeria">Galeria</string>
+    <string name="send">Envia</string>
+    <string name="share">Comparteix</string>
+    <string name="tools">Eines</string>
+    <string name="slideshow" translatable="false">slideshow</string>
+    <string name="t_tol">Títol</string>
+    <string name="descripci">Descripció</string>
     <!-- Nom indrets -->
     <string-array name="indrets_nom">
-        <item>Indret 1</item>
-        <item>Indret 2</item>
-        <item>Indret 3</item>
-        <item>Indret 4</item>
+        <item>Oferta 1</item>
+        <item>Oferta 2</item>
+        <item>Oferta 3</item>
+        <item>Oferta 4</item>
     </string-array>
     <!-- Info indrets -->
     <string-array name="indrets_info">
-        <item>info 1</item>
-        <item>info 2</item>
-        <item>info 3</item>
-        <item>info 4</item>
+        <item>Descripció de la primera oferta.</item>
+        <item>Descripció de la segona oferta.</item>
+        <item>Descripció de la tecera oferta.</item>
+        <item>Descripció de la quarta oferta.</item>
     </string-array>
 </resources>
