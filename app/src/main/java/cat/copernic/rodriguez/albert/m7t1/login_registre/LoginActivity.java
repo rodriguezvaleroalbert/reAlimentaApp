@@ -11,10 +11,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import cat.copernic.rodriguez.albert.m7t1.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
 
 public class LoginActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    FirebaseUser currentUser;
+
+
     //Creamos las variables para los textos y los botones
     private EditText mUsername, mUserpasswd;
 
