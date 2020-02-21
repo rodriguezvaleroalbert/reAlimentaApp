@@ -138,6 +138,10 @@ public class RegistreActivity extends AppCompatActivity {
                                     startActivity(new Intent( RegistreActivity.this,LoginActivity.class ));
                                     finish();
                                 }
+                                else { //11:45 / 20:52
+                                    Toast.makeText(RegistreActivity.this, "No se pudieron crear los datos correctamente.",Toast.LENGTH_SHORT).show();
+
+                                }
                             }
                         });
                     }
