@@ -1,49 +1,58 @@
 package cat.copernic.rodriguez.albert.m7t1.login_registre;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import cat.copernic.rodriguez.albert.m7t1.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
 
 public class LoginActivity extends AppCompatActivity {
+    //Declaracion de las variables de firebase
     private FirebaseAuth mAuth;
     FirebaseUser currentUser;
-
-
     //Creamos las variables para los textos y los botones
-    private EditText mUsername, mUserpasswd;
+    private EditText mUsername, mUserpasswd, mUseremail;
 
+
+    /*
     //Creamos las variables para los Strings
     String Name, Password;
-
     //Creamos las variables para la consulta en las SharedPreferences
     String uName, uPassword;
-
     //Creamos la variable de preferencias
     private SharedPreferences mSharedPreferences;
-
     //Valors posibles del mLogin
     public static final String PREFERENCE = "preference";
     public static final String PREF_NAME = "name";
     public static final String PREF_PASSWD = "passwd";
-    public static final String PREF_SKIP_LOGIN = "skip_login";
+    public static final String PREF_SKIP_LOGIN = "skip_login"; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //Inicialisacion de la instancia del firebase
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
 
         //Se crean los findViewById para enlazar nuestras variables con los componentes del activity_logi
         mUsername = findViewById(R.id.txtEmail);
@@ -51,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
         Button mLogin = findViewById(R.id.btnLogin);
         Button mRegisterBtn = findViewById(R.id.btnRegistrar);
 
+
+
+        /*
         //Crea un objecto de preferencias. ("Datos", es el nombre del archivo de preferencias, "MODE_PRIVATE", es para que otras aplicaciones no puedan acceder al archivo XML de preferencias)
         mSharedPreferences = getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE); //O getDefaultSharedPreferences(getApplicationContext()
 
@@ -102,9 +114,8 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        });
-    }
-
+        }); */  //Login anterior FireBase
+        /*
     //Validar que els camps no estiguin buits
     private boolean validUserData() {
         Name = mUsername.getText().toString().trim();
@@ -114,5 +125,7 @@ public class LoginActivity extends AppCompatActivity {
 
     boolean isEmailValid(CharSequence email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+        */  //Login anterior FireBase
     }
 }
