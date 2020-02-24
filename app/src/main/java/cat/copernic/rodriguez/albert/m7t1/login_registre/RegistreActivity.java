@@ -71,6 +71,7 @@ public class RegistreActivity extends AppCompatActivity {
                 if (!email.isEmpty() && !password.isEmpty()){
                     if (password.length() >=6){
                         registerUser();
+
                     }
                     else {
                         Toast.makeText(RegistreActivity.this,"El password debe tener al menos 6 caracteres", Toast.LENGTH_SHORT);
