@@ -3,129 +3,97 @@ package cat.copernic.rodriguez.albert.m7t1.login_registre;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import cat.copernic.rodriguez.albert.m7t1.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
+import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
+
 
 public class LoginActivity extends AppCompatActivity {
     //Declaracion de las variables de firebase
-    private FirebaseAuth mAuth;
-    FirebaseUser currentUser;
+
     //Creamos las variables para los textos y los botones
-    private EditText mUsername, mUserpasswd, mUseremail;
+    EditText mEmail, mPassword;
+    Button mLoginBtn;
+    Button mRegistrarBtn;
+    FirebaseAuth fAuth;
 
-
-    /*
-    //Creamos las variables para los Strings
-    String Name, Password;
-    //Creamos las variables para la consulta en las SharedPreferences
-    String uName, uPassword;
-    //Creamos la variable de preferencias
-    private SharedPreferences mSharedPreferences;
-    //Valors posibles del mLogin
-    public static final String PREFERENCE = "preference";
-    public static final String PREF_NAME = "name";
-    public static final String PREF_PASSWD = "passwd";
-    public static final String PREF_SKIP_LOGIN = "skip_login"; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //Inicialisacion de la instancia del firebase
-        mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
-
-
         //Se crean los findViewById para enlazar nuestras variables con los componentes del activity_logi
-        mUsername = findViewById(R.id.txtEmail);
-        mUserpasswd = findViewById(R.id.txtPass);
-        Button mLogin = findViewById(R.id.btnLogin);
-        Button mRegisterBtn = findViewById(R.id.btnRegistrar);
+        mEmail = findViewById(R.id.txtEmail);
+        mPassword = findViewById(R.id.txtPass);
+        fAuth = FirebaseAuth.getInstance();
+        mLoginBtn = findViewById(R.id.btnLogin);
+        mRegistrarBtn = findViewById(R.id.btnRegistrar);
 
-
-
-        /*
-        //Crea un objecto de preferencias. ("Datos", es el nombre del archivo de preferencias, "MODE_PRIVATE", es para que otras aplicaciones no puedan acceder al archivo XML de preferencias)
-        mSharedPreferences = getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE); //O getDefaultSharedPreferences(getApplicationContext()
-
-        //Saltarse login
-        if (mSharedPreferences.contains(PREF_SKIP_LOGIN)) {
-            Intent intent = new Intent(LoginActivity.this, Nav.class);
-            startActivity(intent);
-            finish();
-        } else
-        {
-
-            //Fer login
-            mLogin.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (validUserData()) {
-                        if (isEmailValid(Name)) {
-                            //Name = mUsername.getText().toString().trim();
-                            //Password = mUserpasswd.getText().toString().trim();
-                            if (mSharedPreferences.contains(PREF_NAME)) {
-                                uName = mSharedPreferences.getString(PREF_NAME, "");
-                            }
-                            if (mSharedPreferences.contains(PREF_PASSWD)) {
-                                uPassword = mSharedPreferences.getString(PREF_PASSWD, "");
-                            }
-                            if (Name.equals(uName) && Password.equals(uPassword)) {
-                                Intent intent = new Intent(LoginActivity.this, Nav.class);
-                                startActivity(intent);
-                                finish();
-                            } else {
-                                Toast.makeText(getApplicationContext(), R.string.incorrecte, Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            Toast.makeText(getApplicationContext(), R.string.notEmail, Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(getApplicationContext(), R.string.buit, Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-
-        }
-
-        //Anar al registre
-        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
+        mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, RegistreActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }); */  //Login anterior FireBase
-        /*
-    //Validar que els camps no estiguin buits
-    private boolean validUserData() {
-        Name = mUsername.getText().toString().trim();
-        Password = mUserpasswd.getText().toString().trim();
-        return !(mUsername.getText().toString().isEmpty() || mUserpasswd.getText().toString().isEmpty());
-    }
+            public void onClick(View v) {
 
-    boolean isEmailValid(CharSequence email) {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
-    }
-        */  //Login anterior FireBase
+                String email = mEmail.getText().toString().trim();
+                String password = mPassword.getText().toString().trim();
+
+                if (TextUtils.isEmpty(email)) {
+                    mEmail.setError("Se necesita Correo.");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(password)) {
+                    mPassword.setError("Se necesita una contraseña.");
+                    return;
+                }
+
+                if (password.length() < 6) {
+                    mPassword.setError("Password Must be >= 6 Characters");
+                    return;
+                }
+
+
+
+                // authenticate the user
+
+                fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(LoginActivity.this, "Conexion correcta", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), Nav.class));
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+
+                        }
+
+                    }
+                });
+
+            }
+        });
+
+
+        mRegistrarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), RegistreActivity.class));
+            }
+        });
+
+
     }
 }

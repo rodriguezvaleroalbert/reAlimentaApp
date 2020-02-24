@@ -1,16 +1,13 @@
 package cat.copernic.rodriguez.albert.m7t1.login_registre;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,14 +29,13 @@ import java.util.Map;
 import cat.copernic.rodriguez.albert.m7t1.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
 
+
 public class RegistreActivity extends AppCompatActivity {
-    //Creamos las variables para los textos y los botones
     public static final String TAG = "TAG";
     EditText mFullName,mEmail,mPassword,mPhone;
     Button mRegisterBtn;
     TextView mLoginBtn;
     FirebaseAuth fAuth;
-    ProgressBar progressBar;
     FirebaseFirestore fStore;
     String userID;
 
@@ -57,10 +53,10 @@ public class RegistreActivity extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        progressBar = findViewById(R.id.progressBar);
+
 
         if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),Nav.class));
+            startActivity(new Intent(getApplicationContext(), Nav.class));
             finish();
         }
 
@@ -88,7 +84,7 @@ public class RegistreActivity extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+
 
                 // registerar usuario en firebase
 
@@ -118,7 +114,6 @@ public class RegistreActivity extends AppCompatActivity {
 
                         }else {
                             Toast.makeText(RegistreActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
