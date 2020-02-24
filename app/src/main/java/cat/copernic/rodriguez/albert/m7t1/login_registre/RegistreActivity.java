@@ -49,7 +49,7 @@ public class RegistreActivity extends AppCompatActivity {
         mPassword   = findViewById(R.id.password);
         mPhone      = findViewById(R.id.phone);
         mRegisterBtn= findViewById(R.id.btnRegistrar);
-        mLoginBtn   = findViewById(R.id.createText);
+        mLoginBtn   = findViewById(R.id.btnLogin);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -122,12 +122,12 @@ public class RegistreActivity extends AppCompatActivity {
 
 
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+       /*mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                startActivity (new Intent(RegistreActivity.this,LoginActivity.class));
             }
-        });
+        }); */
 
     }
 }

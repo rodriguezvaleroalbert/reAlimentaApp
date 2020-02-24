@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -18,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import cat.copernic.rodriguez.albert.m7t1.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
-import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
+
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -95,5 +94,8 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+    }
+    // he de arreglar una cosa aqui .
+    public void registrarUsuario(View view) {
     }
 }
