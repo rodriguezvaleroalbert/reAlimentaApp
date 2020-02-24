@@ -57,9 +57,9 @@
     <string name="slideshow" translatable="false">slideshow</string>
     <string name="t_tol">Títol</string>
     <string name="descripci">Descripció</string>
-    <string name="telefono">Telefono</string>
-    <string name="email">Email</string>
-    <string name="nombre">Nombre</string>
+    <string name="telefono" translatable="false">telefon</string>
+    <string name="nombre" translatable="false">nom</string>
+
     <!-- Nom indrets -->
     <string-array name="indrets_nom">
         <item>Oferta 1</item>
