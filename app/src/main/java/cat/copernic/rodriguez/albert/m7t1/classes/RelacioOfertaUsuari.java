@@ -2,11 +2,11 @@ package cat.copernic.rodriguez.albert.m7t1.classes;
 
 import androidx.annotation.NonNull;
 
-public class Accedeix {
+public class RelacioOfertaUsuari {
     private int idOferta;
     private int idUsuari;
 
-    public Accedeix(int idOferta, int idUsuari) {
+    public RelacioOfertaUsuari(int idOferta, int idUsuari) {
         this.idOferta = idOferta;
         this.idUsuari = idUsuari;
     }
@@ -30,7 +30,7 @@ public class Accedeix {
     @NonNull
     @Override
     public String toString() {
-        return "Accedeix{" +
+        return "RelacioOfertaUsuari{" +
                 "idOferta=" + idOferta +
                 ", idUsuari=" + idUsuari +
                 '}';

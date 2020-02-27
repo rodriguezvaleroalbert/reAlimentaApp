@@ -11,8 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Map;
+
 import cat.copernic.rodriguez.albert.m7t1.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
+import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.botigues.MapsActivity;
 
 public class LoginActivity extends AppCompatActivity {
     //Creamos las variables para los textos y los botones
@@ -70,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                                 uPassword = mSharedPreferences.getString(PREF_PASSWD, "");
                             }
                             if (Name.equals(uName) && Password.equals(uPassword)) {
-                                Intent intent = new Intent(LoginActivity.this, Nav.class);
+                                Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
                                 startActivity(intent);
                                 finish();
                             } else {

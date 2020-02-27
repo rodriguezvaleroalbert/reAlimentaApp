@@ -71,4 +71,5 @@
         <item>Descripció de la tecera oferta.</item>
         <item>Descripció de la quarta oferta.</item>
     </string-array>
+    <string name="title_activity_maps">Mapa</string>
 </resources>

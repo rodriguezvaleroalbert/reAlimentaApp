@@ -2,7 +2,7 @@ package cat.copernic.rodriguez.albert.m7t1.classes;
 
 import androidx.annotation.NonNull;
 
-public abstract class Usuari {
+public class Usuari {
     private int idUsuari;
     private String mailUsuari;
     private String contrasenyaUsuari;
