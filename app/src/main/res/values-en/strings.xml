@@ -49,4 +49,7 @@
     <string name="tools">Tools</string>
     <string name="t_tol">Title</string>
     <string name="title_activity_maps">Map</string>
+    <string name="RegistreCorrecte">Correct sign up</string>
+    <string name="AutentificacióFallida">Failed authentification</string>
+    <string name="LoginCorrecte">Correct sign in</string>
 </resources>

@@ -75,4 +75,7 @@
         <item>Descripció de la quarta oferta.</item>
     </string-array>
     <string name="title_activity_maps">Mapa</string>
+    <string name="RegistreCorrecte">Registre Correcte.</string>
+    <string name="AutentificacióFallida">Autentificació fallida.</string>
+    <string name="LoginCorrecte">Login correcte</string>
 </resources>
