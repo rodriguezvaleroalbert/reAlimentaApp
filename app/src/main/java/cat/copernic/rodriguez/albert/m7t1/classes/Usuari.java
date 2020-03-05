@@ -1,25 +1,20 @@
 package cat.copernic.rodriguez.albert.m7t1.classes;
 
-import androidx.annotation.NonNull;
-
 public class Usuari {
-    private int idUsuari;
     private String mailUsuari;
-    private String contrasenyaUsuari;
     private int tipusUsuari;
 
-    Usuari(String mailUsuari, String contrasenyaUsuari, int tipusUsuari) {
+    public Usuari() {
+    }
+
+    public Usuari(String mailUsuari, int tipusUsuari) {
         this.mailUsuari = mailUsuari;
-        this.contrasenyaUsuari = contrasenyaUsuari;
         this.tipusUsuari = tipusUsuari;
     }
 
-    public int getIdUsuari() {
-        return idUsuari;
-    }
-
-    public void setIdUsuari(int idUsuari) {
-        this.idUsuari = idUsuari;
+    public Usuari(int idUsuari, String mailUsuari, int tipusUsuari) {
+        this.mailUsuari = mailUsuari;
+        this.tipusUsuari = tipusUsuari;
     }
 
     public String getMailUsuari() {
@@ -30,14 +25,6 @@ public class Usuari {
         this.mailUsuari = mailUsuari;
     }
 
-    public String getContrasenyaUsuari() {
-        return contrasenyaUsuari;
-    }
-
-    public void setContrasenyaUsuari(String contrasenyaUsuari) {
-        this.contrasenyaUsuari = contrasenyaUsuari;
-    }
-
     public int getTipusUsuari() {
         return tipusUsuari;
     }
@@ -46,13 +33,10 @@ public class Usuari {
         this.tipusUsuari = tipusUsuari;
     }
 
-    @NonNull
     @Override
     public String toString() {
-        return "cat.copernic.rodriguez.albert.m7t1.classes.Usuari{" +
-                "idUsuari=" + idUsuari +
+        return "Usuari{" +
                 ", mailUsuari='" + mailUsuari + '\'' +
-                ", contrasenyaUsuari='" + contrasenyaUsuari + '\'' +
                 ", tipusUsuari=" + tipusUsuari +
                 '}';
     }

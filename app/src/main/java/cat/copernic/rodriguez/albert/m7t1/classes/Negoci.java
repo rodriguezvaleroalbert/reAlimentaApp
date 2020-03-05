@@ -8,7 +8,7 @@ public class Negoci extends Usuari{
     private String ubicacioNegoci;
 
     public Negoci(String mailUsuari, String contrasenyaUsuari, int tipusUsuari, String nomNegoci, String coordenadaNegoci, String ubicacioNegoci) {
-        super(mailUsuari, contrasenyaUsuari, tipusUsuari);
+        super(mailUsuari, tipusUsuari);
         this.nomNegoci = nomNegoci;
         this.coordenadaNegoci = coordenadaNegoci;
         this.ubicacioNegoci = ubicacioNegoci;

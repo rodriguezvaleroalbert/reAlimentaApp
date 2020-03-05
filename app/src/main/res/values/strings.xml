@@ -59,7 +59,17 @@
     <string name="descripci">Descripció</string>
     <string name="telefono" translatable="false">telefon</string>
     <string name="nombre" translatable="false">nom</string>
-
+    <string name="title_activity_maps">Mapa</string>
+    <string name="RegistreCorrecte">Registre Correcte.</string>
+    <string name="AutentificacióFallida">Registre erroni</string>
+    <string name="LoginCorrecte">Login correcte</string>
+    <string name="escollirOpcio">S\'ha d\'escollir una tipus d\'usuari</string>
+    <string name="introduirTotsElsCamps">Has d\'introduïr tots els camps.</string>
+    <string name="creaOferta">Crea Oferta</string>
+    <string name="miraOfertesPropies">Mira ofertes pròpies</string>
+    <string name="Donant">donant</string>
+    <string name="ofertesPropies">Mira ofertes pròpies</string>
+    <string name="crea_oferta">Crea oferta</string>
     <!-- Nom indrets -->
     <string-array name="indrets_nom">
         <item>Oferta 1</item>
@@ -74,8 +84,10 @@
         <item>Descripció de la tecera oferta.</item>
         <item>Descripció de la quarta oferta.</item>
     </string-array>
-    <string name="title_activity_maps">Mapa</string>
-    <string name="RegistreCorrecte">Registre Correcte.</string>
-    <string name="AutentificacióFallida">Autentificació fallida.</string>
-    <string name="LoginCorrecte">Login correcte</string>
+    <!-- Tipus usuari -->
+    <string-array name="opcionsTipusUsuari">
+        <item>ESCULL UN TIPUS USUARI</item>
+        <item>Receptor</item>
+        <item>Donant</item>
+    </string-array>
 </resources>

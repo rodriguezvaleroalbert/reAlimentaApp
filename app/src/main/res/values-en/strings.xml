@@ -50,6 +50,9 @@
     <string name="t_tol">Title</string>
     <string name="title_activity_maps">Map</string>
     <string name="RegistreCorrecte">Correct sign up</string>
-    <string name="AutentificacióFallida">Failed authentification</string>
+    <string name="AutentificacióFallida">Failed register</string>
     <string name="LoginCorrecte">Correct sign in</string>
+    <string name="escollirOpcio">You have to choose a user type</string>
+    <string name="introduirTotsElsCamps">You have to introduce all the camps</string>
+    <string name="escollirTipusUsuari">You ha</string>
 </resources>

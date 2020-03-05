@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_donant_miraofertespropies"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/nav_donant_miraofertespropies"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_donant.MiraOfertesPropiesFragment"
+        android:label="@string/miraOfertesPropies"
+        tools:layout="@layout/fragment_miraofertespropies" />
+    <fragment
+        android:id="@+id/nav_donant_creaoferta"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_donant.CreaOfertaFragment"
+        android:label="@string/creaOferta"
+        tools:layout="@layout/fragment_creaoferta" />
+</navigation>

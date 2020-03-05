@@ -55,6 +55,10 @@
             android:name=".apartats_receptor.ofertes.OfertaConcreta"
             android:label="@string/title_oferta_concreta"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".apartats_donant.MainDonant"
+            android:label="@string/Donant"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
     </application>
 
 </manifest>

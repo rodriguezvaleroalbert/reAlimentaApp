@@ -50,6 +50,8 @@
     <string name="t_tol">Título</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="RegistreCorrecte">Registro correcto.</string>
-    <string name="AutentificacióFallida">Autentificación fallida</string>
+    <string name="AutentificacióFallida">Registro erróneo</string>
     <string name="LoginCorrecte">Login correcto</string>
+    <string name="escollirOpcio">Tienes que escojer un tipo de usuario</string>
+    <string name="introduirTotsElsCamps">Tienes que introducir todos los campos</string>
 </resources>

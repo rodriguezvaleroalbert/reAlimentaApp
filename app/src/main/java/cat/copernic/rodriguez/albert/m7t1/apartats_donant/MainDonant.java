@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1;
+package cat.copernic.rodriguez.albert.m7t1.apartats_donant;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,14 +13,16 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Nav extends AppCompatActivity {
+import cat.copernic.rodriguez.albert.m7t1.R;
+
+public class MainDonant extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nav);
+        setContentView(R.layout.donant_activity_nav);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -28,8 +30,7 @@ public class Nav extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+                R.id.nav_donant_creaoferta, R.id.nav_donant_miraofertespropies)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
