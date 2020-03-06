@@ -1,5 +1,6 @@
 package cat.copernic.rodriguez.albert.m7t1.apartats_donant;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +10,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,12 +24,10 @@ import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
 import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
-import cat.copernic.rodriguez.albert.m7t1.login_registre.LoginActivity;
 
 public class CreaOfertaFragment extends Fragment {
     private EditText mNom, mDescripcio, mHorari;
     private FirebaseAuth mAuth;
-    private FirebaseUser mUser;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -57,18 +55,17 @@ public class CreaOfertaFragment extends Fragment {
         DRllistaOfertes.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ArrayList<Oferta> llistaOfertes = (ArrayList<Oferta>) dataSnapshot.getValue();
-                if (llistaOfertes != null) {
-                    int quantitat = llistaOfertes.size();
-                    final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid() + "/" + quantitat);
-                    Oferta novaOferta = new Oferta(quantitat, nom, descripcio, horari);
+                if (dataSnapshot.getValue() != null) {
+                    int posicio = (int) dataSnapshot.getChildrenCount();
+                    final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid() + "/" + posicio);
+                    Oferta novaOferta = new Oferta(posicio, nom, descripcio, horari);
                     DRPujaOferta.setValue(novaOferta);
                     Toast.makeText(getActivity().getApplicationContext(), "Pujat.",
                             Toast.LENGTH_SHORT).show();
                 } else {
-                    int quantitat = 0;
-                    final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid()+ "/"+quantitat);
-                    Oferta novaOferta = new Oferta(quantitat, nom, descripcio, horari);
+                    int posicio = 0;
+                    final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid() + "/" + posicio);
+                    Oferta novaOferta = new Oferta(posicio, nom, descripcio, horari);
                     DRPujaOferta.setValue(novaOferta);
                     Toast.makeText(getActivity().getApplicationContext(), "Pujat.",
                             Toast.LENGTH_SHORT).show();

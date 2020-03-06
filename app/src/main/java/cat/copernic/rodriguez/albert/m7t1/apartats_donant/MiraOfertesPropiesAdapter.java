@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes;
+package cat.copernic.rodriguez.albert.m7t1.apartats_donant;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,31 +13,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
+import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes.OfertaConcretaReceptor;
 import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
 
-
-public class OfertesAdapter extends RecyclerView.Adapter<OfertesAdapter.ViewHolder> {
+public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesPropiesAdapter.ViewHolder> {
 
     //Member variables
     private final ArrayList<Oferta> mOfertesData;
     private Context mContext;
 
-    OfertesAdapter(Context context, ArrayList<Oferta> ofertesData) {
+    MiraOfertesPropiesAdapter(Context context, ArrayList<Oferta> ofertesData) {
         this.mOfertesData = ofertesData;
         this.mContext = context;
     }
 
     //Necessari per crear el ViewHolder
-    //Fa falta crear list_item
+//Fa falta crear list_item
     @NonNull
     @Override
-    public OfertesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MiraOfertesPropiesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.list_item, parent, false));
     }
 
     //Per donar dades al ViewHolder
     @Override
-    public void onBindViewHolder(OfertesAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(MiraOfertesPropiesAdapter.ViewHolder holder, int position) {
         //Obtenir l'indret actual
         Oferta currentOferta = mOfertesData.get(position);
         //Omplir els TextView de dades
