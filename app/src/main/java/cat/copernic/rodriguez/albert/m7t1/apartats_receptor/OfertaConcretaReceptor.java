@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes;
+package cat.copernic.rodriguez.albert.m7t1.apartats_receptor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import cat.copernic.rodriguez.albert.m7t1.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
 
 public class OfertaConcretaReceptor extends AppCompatActivity {

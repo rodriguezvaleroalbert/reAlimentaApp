@@ -32,7 +32,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".apartats_receptor.botigues.MapsActivity"
+            android:name=".apartats_receptor.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity
             android:name=".login_registre.LoginActivity"
@@ -48,11 +48,11 @@
             android:label="@string/registre"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".Nav"
+            android:name=".apartats_receptor.Nav"
             android:label="@string/title_activity_nav"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".apartats_receptor.ofertes.OfertaConcretaReceptor"
+            android:name=".apartats_receptor.OfertaConcretaReceptor"
             android:label="@string/title_oferta_concreta"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity

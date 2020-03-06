@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.apartats_donant;
+package cat.copernic.rodriguez.albert.m7t1.classes;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
-import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes.OfertaConcretaReceptor;
-import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
+import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.OfertaConcretaReceptor;
 
 public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesPropiesAdapter.ViewHolder> {
 
@@ -22,7 +21,7 @@ public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesP
     private final ArrayList<Oferta> mOfertesData;
     private Context mContext;
 
-    MiraOfertesPropiesAdapter(Context context, ArrayList<Oferta> ofertesData) {
+    public MiraOfertesPropiesAdapter(Context context, ArrayList<Oferta> ofertesData) {
         this.mOfertesData = ofertesData;
         this.mContext = context;
     }

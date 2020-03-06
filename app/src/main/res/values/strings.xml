@@ -74,6 +74,7 @@
     <string name="descripcio">Descripció</string>
     <string name="horari">Horari</string>
     <string name="puja_la_oferta">Puja la oferta</string>
+    <string name="logout">logout</string>
     <!-- Nom indrets -->
     <string-array name="indrets_nom">
         <item>Oferta 1</item>

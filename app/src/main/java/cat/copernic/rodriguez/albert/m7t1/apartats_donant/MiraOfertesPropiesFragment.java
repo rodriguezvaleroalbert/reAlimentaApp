@@ -1,14 +1,11 @@
 package cat.copernic.rodriguez.albert.m7t1.apartats_donant;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,12 +18,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
+import cat.copernic.rodriguez.albert.m7t1.classes.MiraOfertesPropiesAdapter;
 import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
 
 public class MiraOfertesPropiesFragment extends Fragment {

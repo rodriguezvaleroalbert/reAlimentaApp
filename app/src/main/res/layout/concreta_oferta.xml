@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:contentDescription="@string/descriptionActivity_registre"
     android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-    tools:context=".apartats_receptor.ofertes.OfertaConcretaReceptor">
+    tools:context=".apartats_receptor.OfertaConcretaReceptor">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"

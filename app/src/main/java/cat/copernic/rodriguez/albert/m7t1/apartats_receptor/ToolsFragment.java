@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.apartats_receptor.share;
+package cat.copernic.rodriguez.albert.m7t1.apartats_receptor;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
 
-public class ShareFragment extends Fragment {
+public class ToolsFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_share, container, false);
+        return inflater.inflate(R.layout.fragment_tools, container, false);
     }
 }

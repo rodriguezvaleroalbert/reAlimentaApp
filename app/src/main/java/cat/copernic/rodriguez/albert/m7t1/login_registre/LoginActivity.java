@@ -20,7 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import cat.copernic.rodriguez.albert.m7t1.Nav;
+import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
 import cat.copernic.rodriguez.albert.m7t1.apartats_donant.MainDonant;
 

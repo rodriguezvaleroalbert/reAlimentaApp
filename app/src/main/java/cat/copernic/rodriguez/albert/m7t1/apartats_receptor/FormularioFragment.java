@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.apartats_receptor.formulari;
+package cat.copernic.rodriguez.albert.m7t1.apartats_receptor;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

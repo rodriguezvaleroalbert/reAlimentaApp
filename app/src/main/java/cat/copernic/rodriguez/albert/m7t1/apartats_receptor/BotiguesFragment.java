@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.apartats_receptor.botigues;
+package cat.copernic.rodriguez.albert.m7t1.apartats_receptor;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

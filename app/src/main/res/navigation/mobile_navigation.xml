@@ -7,37 +7,37 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes.OfertesFragment"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.OfertesFragment"
         android:label="@string/Ofertes"
         tools:layout="@layout/fragment_ofertes" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.botigues.BotiguesFragment"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.BotiguesFragment"
         android:label="@string/Botigues"
         tools:layout="@layout/fragment_botigues" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.formulari.FormularioFragment"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.FormularioFragment"
         android:label="@string/Formulari"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.tools.ToolsFragment"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ToolsFragment"
         android:label="@string/Eines"
         tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.share.ShareFragment"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ShareFragment"
         android:label="@string/Comparteix"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.send.SendFragment"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.SendFragment"
         android:label="@string/Envia"
         tools:layout="@layout/fragment_send" />
 

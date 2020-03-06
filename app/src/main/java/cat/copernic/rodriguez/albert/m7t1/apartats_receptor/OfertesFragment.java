@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ofertes;
+package cat.copernic.rodriguez.albert.m7t1.apartats_receptor;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,12 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
+import cat.copernic.rodriguez.albert.m7t1.classes.OfertesReceptorAdapter;
 import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
 
 public class OfertesFragment extends Fragment {
 
     private ArrayList<Oferta> mOfertesData;
-    private OfertesAdapter mAdapter;
+    private OfertesReceptorAdapter mAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class OfertesFragment extends Fragment {
         mOfertesData = new ArrayList<>();
 
         //Inicialitzar l'adaptador i establir-lo al RecyclerView
-        mAdapter = new OfertesAdapter(getContext(), mOfertesData);
+        mAdapter = new OfertesReceptorAdapter(getContext(), mOfertesData);
         mRecyclerView.setAdapter(mAdapter);
 
         //Get the data
