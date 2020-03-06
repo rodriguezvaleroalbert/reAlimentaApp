@@ -18,7 +18,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
 import cat.copernic.rodriguez.albert.m7t1.classes.MiraOfertesPropiesAdapter;
@@ -28,8 +27,6 @@ public class MiraOfertesPropiesFragment extends Fragment {
 
     private ArrayList<Oferta> mOfertesData;
     private MiraOfertesPropiesAdapter mAdapter;
-    FirebaseDatabase database;
-    DatabaseReference DROferta;
     private FirebaseAuth mAuth;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -59,13 +56,11 @@ public class MiraOfertesPropiesFragment extends Fragment {
 
     private void initializeData(FirebaseDatabase database) {
         mOfertesData.clear();
-        DROferta = database.getReference("Ofertes/" + mAuth.getUid());
+        DatabaseReference DROferta = database.getReference("Ofertes/" + mAuth.getUid());
         DROferta.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Iterator it = dataSnapshot.getChildren().iterator();
-                while (it.hasNext()) {
-                    DataSnapshot dataSnapshotAux = (DataSnapshot) it.next();
+                for (DataSnapshot dataSnapshotAux : dataSnapshot.getChildren()) {
                     Oferta nova = new Oferta();
                     String descripcioOferta = (String) dataSnapshotAux.child("descripcioOferta").getValue();
                     nova.setDescripcioOferta(descripcioOferta);
@@ -81,8 +76,6 @@ public class MiraOfertesPropiesFragment extends Fragment {
                     mOfertesData.add(nova);
 
                 }
-                Oferta proba = new Oferta(90, "fa", "fdsa", "fdsafd");
-                mOfertesData.add(proba);
                 mAdapter.notifyDataSetChanged();
             }
 
