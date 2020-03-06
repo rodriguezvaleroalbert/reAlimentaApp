@@ -39,12 +39,21 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        /*FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth auth) {
+                FirebaseUser firebaseUser = auth.getCurrentUser();
+                if (firebaseUser != null) {
+                    comprobaTipusUsuari(database);
+                }
+            }
+        };*/
         //Se crean los findViewById para enlazar nuestras variables con los componentes del activity_logi
         mUsername = findViewById(R.id.txtEmail);
         mUserpasswd = findViewById(R.id.txtPass);
         Button mLogin = findViewById(R.id.btnLogin);
         Button mRegisterBtn = findViewById(R.id.btnRegistrar);
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
         //DRnomUsuari = database.getReference("Usuaris/" + mAuth.getUid() + "/mailUsuari");
         //DRtipusUsuari = database.getReference("Usuaris/" + mAuth.getUid() + "/tipusUsuari");
         mLogin.setOnClickListener(new View.OnClickListener() {

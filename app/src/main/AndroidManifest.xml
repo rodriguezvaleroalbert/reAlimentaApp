@@ -52,7 +52,7 @@
             android:label="@string/title_activity_nav"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".apartats_receptor.ofertes.OfertaConcreta"
+            android:name=".apartats_receptor.ofertes.OfertaConcretaReceptor"
             android:label="@string/title_oferta_concreta"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity

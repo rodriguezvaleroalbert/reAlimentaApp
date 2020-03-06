@@ -2,17 +2,20 @@ package cat.copernic.rodriguez.albert.m7t1.classes;
 
 import androidx.annotation.NonNull;
 
-import java.util.Arrays;
-
 public class Oferta {
     private int idOferta;
     private String titolOferta;
-    private String[] etiquetaMenjar;
     private String descripcioOferta;
     private String horariRecogida;
 
-    public Oferta(String titolOferta) {
+    public Oferta() {
+    }
+
+    public Oferta(int idOferta, String titolOferta, String descripcioOferta, String horariRecogida) {
+        this.idOferta = idOferta;
         this.titolOferta = titolOferta;
+        this.descripcioOferta = descripcioOferta;
+        this.horariRecogida = horariRecogida;
     }
 
     public Oferta(String titolOferta, String descripcioOferta) {
@@ -34,14 +37,6 @@ public class Oferta {
 
     public void setTitolOferta(String titolOferta) {
         this.titolOferta = titolOferta;
-    }
-
-    public String[] getEtiquetaMenjar() {
-        return etiquetaMenjar;
-    }
-
-    public void setEtiquetaMenjar(String[] etiquetaMenjar) {
-        this.etiquetaMenjar = etiquetaMenjar;
     }
 
     public String getDescripcioOferta() {
@@ -66,7 +61,6 @@ public class Oferta {
         return "Oferta{" +
                 "idOferta=" + idOferta +
                 ", titolOferta='" + titolOferta + '\'' +
-                ", etiquetaMenjar=" + Arrays.toString(etiquetaMenjar) +
                 ", descripcioOferta='" + descripcioOferta + '\'' +
                 ", horariRecogida='" + horariRecogida + '\'' +
                 '}';

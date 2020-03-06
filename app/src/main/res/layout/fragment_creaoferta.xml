@@ -6,28 +6,105 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titol"
-        android:layout_width="match_parent"
+        android:id="@+id/txtTitolCreaOferta"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/t_tol"
+        android:text="@string/creaOferta"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryTextColor"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/descripcio"
-        android:layout_width="match_parent"
+        android:id="@+id/txtEtiquetaTitol"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/descripci"
-        android:textColor="@color/colorPrimaryTextColor"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titol"
+        android:layout_marginEnd="7dp"
+        android:text="@string/titol"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etTtolOferta"
+        app:layout_constraintEnd_toStartOf="@+id/etTtolOferta"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etTtolOferta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtEtiquetaTitol"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitolCreaOferta"
+        android:autofillHints=""
+        tools:ignore="LabelFor"
         tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/txtEtiquetaDescripcio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:text="@string/descripcio"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etDescripcioOferta"
+        app:layout_constraintEnd_toStartOf="@+id/etDescripcioOferta"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etDescripcioOferta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtEtiquetaDescripcio"
+        app:layout_constraintTop_toBottomOf="@+id/etTtolOferta"
+        android:autofillHints=""
+        tools:ignore="LabelFor"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/txtEtiquetaHorari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/horari"
+        app:layout_constraintEnd_toStartOf="@+id/etHorariOferta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etHorariOferta" />
+
+    <EditText
+        android:id="@+id/etHorariOferta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtEtiquetaHorari"
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcioOferta"
+        android:autofillHints=""
+        tools:ignore="LabelFor"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/btnPuja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/puja_la_oferta"
+        app:layout_constraintStart_toStartOf="@+id/etHorariOferta"
+        app:layout_constraintTop_toBottomOf="@+id/etHorariOferta" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
