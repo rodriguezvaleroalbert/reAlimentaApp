@@ -31,6 +31,7 @@ public class CreaOfertaFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_creaoferta, container, false);
         mAuth = FirebaseAuth.getInstance();
+        System.out.println("La id és:" + mAuth.getUid());
         mNom = root.findViewById(R.id.etTtolOferta);
         mDescripcio = root.findViewById(R.id.etDescripcioOferta);
         mHorari = root.findViewById(R.id.etHorariOferta);
@@ -54,19 +55,46 @@ public class CreaOfertaFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() != null) {
-                    int posicio = (int) dataSnapshot.getChildrenCount();
-                    final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid() + "/" + posicio);
-                    Oferta novaOferta = new Oferta(posicio, nom, descripcio, horari, mAuth.getUid());
-                    DRPujaOferta.setValue(novaOferta);
-                    Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Pujat.",
-                            Toast.LENGTH_SHORT).show();
+                    final int posicio = (int) dataSnapshot.getChildrenCount();
+                    final DatabaseReference DRnegoci = database.getReference("Negocis/" + mAuth.getUid() + "/0/ubicacioNegoci");
+                    DRnegoci.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            String ubicacio = (String)dataSnapshot.getValue();
+                            final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid() + "/" + posicio);
+                            Oferta novaOferta = new Oferta(posicio, nom, descripcio, horari, mAuth.getUid(), ubicacio);
+                            System.out.println("La oferta penjada al penjar-la:" + novaOferta.toString());
+                            DRPujaOferta.setValue(novaOferta);
+                            Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Pujat.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
                 } else {
-                    int posicio = 0;
-                    final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid() + "/" + posicio);
-                    Oferta novaOferta = new Oferta(posicio, nom, descripcio, horari, mAuth.getUid());
-                    DRPujaOferta.setValue(novaOferta);
-                    Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Pujat.",
-                            Toast.LENGTH_SHORT).show();
+                    final DatabaseReference DRnegoci = database.getReference("Negocis/" + mAuth.getUid() + "/0/ubicacioNegoci");
+                    DRnegoci.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            String ubicacio = (String)dataSnapshot.getValue();
+                            int posicio = 0;
+                            final DatabaseReference DRPujaOferta = database.getReference("/Ofertes" + "/" + mAuth.getUid() + "/" + posicio);
+                            Oferta novaOferta = new Oferta(posicio, nom, descripcio, horari, mAuth.getUid(), ubicacio);
+                            System.out.println("La oferta penjada al penjar-la:" + novaOferta.toString());
+                            DRPujaOferta.setValue(novaOferta);
+                            Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Pujat.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
                 }
             }
 

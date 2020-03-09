@@ -8,16 +8,18 @@ public class Oferta {
     private String descripcioOferta;
     private String horariRecogida;
     private String idNegoci;
+    private String ubicacioNegoci;
 
     public Oferta() {
     }
 
-    public Oferta(int idOferta, String titolOferta, String descripcioOferta, String horariRecogida, String idNegoci) {
+    public Oferta(int idOferta, String titolOferta, String descripcioOferta, String horariRecogida, String idNegoci, String ubicacioNegoci) {
         this.idOferta = idOferta;
         this.titolOferta = titolOferta;
         this.descripcioOferta = descripcioOferta;
         this.horariRecogida = horariRecogida;
         this.idNegoci = idNegoci;
+        this.ubicacioNegoci = ubicacioNegoci;
     }
 
     public int getIdOferta() {
@@ -60,6 +62,14 @@ public class Oferta {
         this.idNegoci = idNegoci;
     }
 
+    public String getUbicacioNegoci() {
+        return ubicacioNegoci;
+    }
+
+    public void setUbicacioNegoci(String ubicacioNegoci) {
+        this.ubicacioNegoci = ubicacioNegoci;
+    }
+
     @Override
     public String toString() {
         return "Oferta{" +
@@ -68,6 +78,7 @@ public class Oferta {
                 ", descripcioOferta='" + descripcioOferta + '\'' +
                 ", horariRecogida='" + horariRecogida + '\'' +
                 ", idNegoci='" + idNegoci + '\'' +
+                ", ubicacioNegoci='" + ubicacioNegoci + '\'' +
                 '}';
     }
 }

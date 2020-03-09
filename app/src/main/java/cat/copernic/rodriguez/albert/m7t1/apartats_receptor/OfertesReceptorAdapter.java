@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.classes;
+package cat.copernic.rodriguez.albert.m7t1.apartats_receptor;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,30 +13,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
-import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.OfertaConcretaReceptor;
+import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
 
-public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesPropiesAdapter.ViewHolder> {
+
+public class OfertesReceptorAdapter extends RecyclerView.Adapter<OfertesReceptorAdapter.ViewHolder> {
 
     //Member variables
     private final ArrayList<Oferta> mOfertesData;
     private Context mContext;
 
-    public MiraOfertesPropiesAdapter(Context context, ArrayList<Oferta> ofertesData) {
+    public OfertesReceptorAdapter(Context context, ArrayList<Oferta> ofertesData) {
         this.mOfertesData = ofertesData;
         this.mContext = context;
     }
 
     //Necessari per crear el ViewHolder
-//Fa falta crear list_item
+    //Fa falta crear list_item
     @NonNull
     @Override
-    public MiraOfertesPropiesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public OfertesReceptorAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.list_item, parent, false));
     }
 
     //Per donar dades al ViewHolder
     @Override
-    public void onBindViewHolder(MiraOfertesPropiesAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(OfertesReceptorAdapter.ViewHolder holder, int position) {
         //Obtenir l'indret actual
         Oferta currentOferta = mOfertesData.get(position);
         //Omplir els TextView de dades
@@ -54,15 +55,19 @@ public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesP
 
         //Variables membres per als TextView
         private TextView mNomText; //CANVIAR
-        private TextView mInfoText; //CANVIAR
+        //private TextView mInfoText; //CANVIAR
+        private TextView mHorari;
+        private TextView mNegoci;
 
         //Constructor pel ViewHolder, fet servir a onCreateViewHolder()
         ViewHolder(View itemView) {
             super(itemView);
 
             //Inicialitzar les Views
-            mNomText = itemView.findViewById(R.id.title);
-            mInfoText = itemView.findViewById(R.id.subTitle);
+            mNomText = itemView.findViewById(R.id.txtTitle);
+            //mInfoText = itemView.findViewById(R.id.subTitle);
+            mHorari = itemView.findViewById(R.id.txtHorari);
+            mNegoci = itemView.findViewById(R.id.txtUbicacioNegoci);
 
             //Establir el onClickListener a tota la vista
             itemView.setOnClickListener(this);
@@ -71,7 +76,9 @@ public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesP
         void bindTo(Oferta currentOferta) {
             //Populate the textviews with data
             mNomText.setText(currentOferta.getTitolOferta());
-            mInfoText.setText(currentOferta.getDescripcioOferta());
+            //mInfoText.setText(currentOferta.getDescripcioOferta());
+            mHorari.setText(currentOferta.getHorariRecogida());
+            mNegoci.setText(currentOferta.getUbicacioNegoci());
         }
 
 
@@ -82,9 +89,10 @@ public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesP
             Intent detailIntent = new Intent(mContext, OfertaConcretaReceptor.class);
             detailIntent.putExtra("titol", currentOferta.getTitolOferta());
             detailIntent.putExtra("descripcio", currentOferta.getDescripcioOferta());
+            detailIntent.putExtra("horari", currentOferta.getHorariRecogida());
+            detailIntent.putExtra("ubicacio", currentOferta.getUbicacioNegoci());
             mContext.startActivity(detailIntent);
         }
     }
-
 }
 
