@@ -59,6 +59,9 @@
             android:name=".apartats_donant.MainDonant"
             android:label="@string/Donant"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".login_registre.CreaNegoci"
+            android:label="Crea negoci"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>

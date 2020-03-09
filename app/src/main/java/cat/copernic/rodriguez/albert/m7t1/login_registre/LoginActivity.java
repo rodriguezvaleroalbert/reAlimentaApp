@@ -20,15 +20,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.Nav;
 import cat.copernic.rodriguez.albert.m7t1.R;
 import cat.copernic.rodriguez.albert.m7t1.apartats_donant.MainDonant;
+import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.Nav;
 
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    //DatabaseReference DRnomUsuari;
+    DatabaseReference DRNegoci;
     DatabaseReference DRtipusUsuari;
 
     //Creamos las variables para los textos y los botones
@@ -40,15 +40,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        /*FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth auth) {
-                FirebaseUser firebaseUser = auth.getCurrentUser();
-                if (firebaseUser != null) {
-                    comprobaTipusUsuari(database);
-                }
-            }
-        };*/
+        if (mAuth.getCurrentUser() != null) {
+            finish();
+            comprobaTipusUsuari(database);
+        }
         //Se crean los findViewById para enlazar nuestras variables con los componentes del activity_logi
         mUsername = findViewById(R.id.txtEmail);
         mUserpasswd = findViewById(R.id.txtPass);
@@ -108,14 +103,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (tipusUsuariAux != null) {
                     tipusUsuari[0] = tipusUsuariAux;
                     if (tipusUsuari[0] == 2) {
-
-                                    Intent intent = new Intent(LoginActivity.this, MainDonant.class);
-                                    startActivity(intent);
-                                    finish();
+                        comprobaNegoci(database);
                     } else {
-                                    Intent intent = new Intent(LoginActivity.this, Nav.class);
-                                    startActivity(intent);
-                                    finish();
+                        Intent intent = new Intent(LoginActivity.this, Nav.class);
+                        startActivity(intent);
+                        finish();
                     }
                 }
             }
@@ -125,5 +117,29 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         }));
+
+    }
+
+    private void comprobaNegoci(final FirebaseDatabase database) {
+        DRNegoci = database.getReference("Negocis/" + mAuth.getUid());
+        DRNegoci.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.getChildrenCount() == 0) {
+                    Intent intent = new Intent(LoginActivity.this, CreaNegoci.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(LoginActivity.this, MainDonant.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }

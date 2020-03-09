@@ -2,16 +2,30 @@ package cat.copernic.rodriguez.albert.m7t1.classes;
 
 import androidx.annotation.NonNull;
 
-public class Negoci extends Usuari{
+public class Negoci {
+    private int idNegoci;
     private String nomNegoci;
-    private String coordenadaNegoci;
+    private String descripcioNegoci;
     private String ubicacioNegoci;
+    private String idUsuari;
 
-    public Negoci(String mailUsuari, String contrasenyaUsuari, int tipusUsuari, String nomNegoci, String coordenadaNegoci, String ubicacioNegoci) {
-        super(mailUsuari, tipusUsuari);
+    public Negoci() {
+    }
+
+    public Negoci(int idNegoci, String nomNegoci, String descripcioNegoci, String ubicacioNegoci, String idUsuari) {
+        this.idNegoci = idNegoci;
         this.nomNegoci = nomNegoci;
-        this.coordenadaNegoci = coordenadaNegoci;
+        this.descripcioNegoci = descripcioNegoci;
         this.ubicacioNegoci = ubicacioNegoci;
+        this.idUsuari = idUsuari;
+    }
+
+    public int getIdNegoci() {
+        return idNegoci;
+    }
+
+    public void setIdNegoci(int idNegoci) {
+        this.idNegoci = idNegoci;
     }
 
     public String getNomNegoci() {
@@ -22,12 +36,12 @@ public class Negoci extends Usuari{
         this.nomNegoci = nomNegoci;
     }
 
-    public String getCoordenadaNegoci() {
-        return coordenadaNegoci;
+    public String getDescripcioNegoci() {
+        return descripcioNegoci;
     }
 
-    public void setCoordenadaNegoci(String coordenadaNegoci) {
-        this.coordenadaNegoci = coordenadaNegoci;
+    public void setDescripcioNegoci(String descripcioNegoci) {
+        this.descripcioNegoci = descripcioNegoci;
     }
 
     public String getUbicacioNegoci() {
@@ -38,13 +52,22 @@ public class Negoci extends Usuari{
         this.ubicacioNegoci = ubicacioNegoci;
     }
 
-    @NonNull
+    public String getIdUsuari() {
+        return idUsuari;
+    }
+
+    public void setIdUsuari(String idUsuari) {
+        this.idUsuari = idUsuari;
+    }
+
     @Override
     public String toString() {
         return "Negoci{" +
+                "idNegoci=" + idNegoci +
                 ", nomNegoci='" + nomNegoci + '\'' +
-                ", coordenadaNegoci='" + coordenadaNegoci + '\'' +
+                ", descripcioNegoci='" + descripcioNegoci + '\'' +
                 ", ubicacioNegoci='" + ubicacioNegoci + '\'' +
+                ", idUsuari='" + idUsuari + '\'' +
                 '}';
     }
 }
