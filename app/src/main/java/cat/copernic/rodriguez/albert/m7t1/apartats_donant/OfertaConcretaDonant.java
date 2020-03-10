@@ -33,7 +33,7 @@ public class OfertaConcretaDonant extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         final TextView ofertesTitol = findViewById(R.id.titol);
         final TextView ofertesDescripcio = findViewById(R.id.descripcio);
-        final TextView ofertesHorari = findViewById(R.id.txtHorari);
+        final TextView ofertesHorari = findViewById(R.id.txtDescripcio);
         final TextView ofertesUbicacio = findViewById(R.id.txtUbicacioNegoci);
         Button btnModificaOferta = findViewById(R.id.modificaOferta);
         titol = getIntent().getStringExtra("titol");

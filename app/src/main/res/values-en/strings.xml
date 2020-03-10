@@ -54,5 +54,26 @@
     <string name="LoginCorrecte">Correct sign in</string>
     <string name="escollirOpcio">You have to choose a user type</string>
     <string name="introduirTotsElsCamps">You have to introduce all the camps</string>
-    <string name="escollirTipusUsuari">You ha</string>
+    <string name="escollirTipusUsuari">Choose user type</string>
+    <string name="creaOferta">Make offer</string>
+    <string name="miraOfertesPropies">See own offers</string>
+    <string name="Donant">Giver</string>
+    <string name="ofertesPropies">See own offers</string>
+    <string name="crea_oferta">Make offer</string>
+    <string name="titol">Title</string>
+    <string name="descripcio">Description</string>
+    <string name="horari">Timetable</string>
+    <string name="puja_la_oferta">Up the offer</string>
+    <string name="logout">Logout</string>
+    <string name="nomNegoci">Seller name</string>
+    <string name="descripcioNegoci">Seller description</string>
+    <string name="UbicacioNegoci">Seller ubication</string>
+    <string name="registreBotiga">Seller register</string>
+    <string name="registre_botiga_incorrecte">Seller register incorrect</string>
+    <string name="registre_botiga_correcte">Seller register correct</string>
+    <string name="modifica_oferta">Modify offer</string>
+    <string name="title_activity_tiendas_map">Map</string>
+    <string name="sube_aqui_la_foto_de_la_tienda_donante">Up here the seller photo</string>
+    <string name="sube_foto">Up photo</string>
+    <string name="fotografia">Photo</string>
 </resources>

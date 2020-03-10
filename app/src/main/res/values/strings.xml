@@ -7,7 +7,7 @@
     <string name="Ofertes">Ofertes</string>
     <string name="Botigues">Botigues</string>
     <string name="Formulari">Formulari</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="Eines">Eines</string>
     <string name="Comparteix">Comparteix</string>
     <string name="Envia">Envia</string>
@@ -75,13 +75,13 @@
     <string name="descripcio">Descripció</string>
     <string name="horari">Horari</string>
     <string name="puja_la_oferta">Puja la oferta</string>
-    <string name="logout">logout</string>
-    <string name="nomNegoci">nomNegoci</string>
-    <string name="descripcioNegoci">descripcioNegoci</string>
-    <string name="UbicacioNegoci" />
-    <string name="registreBotiga">Registre de la botiga correcte!</string>
+    <string name="logout">Logout</string>
+    <string name="nomNegoci">Nom del negoci</string>
+    <string name="descripcioNegoci">Descripció del negoci</string>
+    <string name="UbicacioNegoci">Ubicació del negoci</string>
+    <string name="registreBotiga">Registre de la botiga</string>
     <string name="registre_botiga_incorrecte">Registre de la botiga incorrecte.</string>
-    <string name="registre_botiga_correcte" />
+    <string name="registre_botiga_correcte">Registre de la botiga correcte</string>
     <string name="modifica_oferta">Modifica oferta</string>
     <!-- Nom indrets -->
     <string-array name="indrets_nom">
@@ -103,6 +103,9 @@
         <item>Receptor</item>
         <item>Donant</item>
     </string-array>
-    <string name="title_activity_tiendas_map">Map</string>
-    <string name="sube_aqui_la_foto_de_la_tienda_donante">Sube aqui la foto de la tienda donante</string>
+    <string name="title_activity_tiendas_map">Mapa</string>
+    <string name="sube_aqui_la_foto_de_la_tienda_donante">Puja aquí la foto de la botiga</string>
+    <string name="sube_foto">Sube foto</string>
+    <string name="fotografia">Fotografia</string>
+    <string name="escollirTipusUsuari">Escollir tipus d\'usuari</string>
 </resources>

@@ -10,24 +10,28 @@ import androidx.appcompat.widget.Toolbar;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
 
-public class OfertaConcretaReceptor extends AppCompatActivity {
+public class BotigaConcretaReceptor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.concreta_oferta);
+        setContentView(R.layout.concreta_botiga);
 
         Toolbar myToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 
 
-        TextView ofertesTitle = findViewById(R.id.titol);
-        TextView ofertesDescripcio = findViewById(R.id.descripcio);
-        TextView ofertesHorari = findViewById(R.id.txtDescripcio);
-        TextView ofertesUbicacio = findViewById(R.id.txtUbicacioNegoci);
-        ofertesTitle.setText(getIntent().getStringExtra("titol"));
-        ofertesDescripcio.setText((getIntent().getStringExtra("descripcio")));
-        ofertesHorari.setText((getIntent().getStringExtra("horari")));
-        ofertesUbicacio.setText((getIntent().getStringExtra("ubicacio")));
+        TextView botigaTitle = findViewById(R.id.titol);
+        TextView botigaDescripcio = findViewById(R.id.descripcio);
+        TextView botigaUbicacio = findViewById(R.id.txtUbicacioNegoci);
+        String nomNegoci = getIntent().getStringExtra("nomNegoci");
+        String descripcioNegoci = (getIntent().getStringExtra("descripcioNegoci"));
+        String ubicacioNegoci = (getIntent().getStringExtra("ubicacioNegoci"));
+        //String idUsuari = getIntent().getStringExtra("idUsuari", 0);
+        //int idNegoci = getIntent().getIntExtra("idNegoci", 0);
+        botigaTitle.setText(nomNegoci);
+        botigaDescripcio.setText(descripcioNegoci);
+        botigaUbicacio.setText(ubicacioNegoci);
+
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -39,12 +43,11 @@ public class OfertaConcretaReceptor extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            Intent intent = new Intent(OfertaConcretaReceptor.this, Nav.class);
+            Intent intent = new Intent(BotigaConcretaReceptor.this, Nav.class);
             startActivity(intent);
             finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

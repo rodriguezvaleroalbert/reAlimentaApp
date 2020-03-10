@@ -9,8 +9,8 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -68,6 +68,10 @@
         <activity
             android:name=".apartats_donant.OfertaConcretaDonant"
             android:label="Oferta Concreta"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".apartats_receptor.BotigaConcretaReceptor"
+            android:label="Botiga Concreta"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
     </application>
 

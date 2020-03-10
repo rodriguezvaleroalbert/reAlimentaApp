@@ -13,18 +13,4 @@
             android:icon="@drawable/ic_menu_send"
             android:title="@string/crea_oferta" />
     </group>
-
-    <item android:title="@string/communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/Comparteix" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/Envia" />
-        </menu>
-    </item>
-
 </menu>

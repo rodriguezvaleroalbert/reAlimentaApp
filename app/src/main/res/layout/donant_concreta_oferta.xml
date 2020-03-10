@@ -59,7 +59,7 @@
         tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/txtHorari"
+        android:id="@+id/txtDescripcio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -87,7 +87,7 @@
         android:textColor="@color/colorPrimaryTextColor"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHorari"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcio"
         tools:targetApi="o" />
 
     <Button

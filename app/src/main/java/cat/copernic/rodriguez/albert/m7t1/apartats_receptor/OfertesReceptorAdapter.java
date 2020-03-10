@@ -22,7 +22,7 @@ public class OfertesReceptorAdapter extends RecyclerView.Adapter<OfertesReceptor
     private final ArrayList<Oferta> mOfertesData;
     private Context mContext;
 
-    public OfertesReceptorAdapter(Context context, ArrayList<Oferta> ofertesData) {
+    OfertesReceptorAdapter(Context context, ArrayList<Oferta> ofertesData) {
         this.mOfertesData = ofertesData;
         this.mContext = context;
     }
@@ -64,9 +64,9 @@ public class OfertesReceptorAdapter extends RecyclerView.Adapter<OfertesReceptor
             super(itemView);
 
             //Inicialitzar les Views
-            mNomText = itemView.findViewById(R.id.txtTitle);
+            mNomText = itemView.findViewById(R.id.txtNom);
             //mInfoText = itemView.findViewById(R.id.subTitle);
-            mHorari = itemView.findViewById(R.id.txtHorari);
+            mHorari = itemView.findViewById(R.id.txtDescripcio);
             mNegoci = itemView.findViewById(R.id.txtUbicacioNegoci);
 
             //Establir el onClickListener a tota la vista

@@ -73,28 +73,28 @@ public class OfertesFragment extends Fragment {
         DRUsu.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-             for(DataSnapshot dataSnapshotAuxUsu : dataSnapshot.getChildren()){
-                 for (DataSnapshot dataSnapshotAux : dataSnapshotAuxUsu.getChildren()) {
-                     Oferta nova = new Oferta();
-                     String descripcioOferta = (String) dataSnapshotAux.child("descripcioOferta").getValue();
-                     nova.setDescripcioOferta(descripcioOferta);
-                     String horariRecogida = (String) dataSnapshotAux.child("horariRecogida").getValue();
-                     nova.setHorariRecogida(horariRecogida);
-                     if (dataSnapshotAux.child("idOferta").getValue() != null) {
-                         long idOferta = (long) dataSnapshotAux.child("idOferta").getValue();
-                         nova.setIdOferta((int) idOferta);
-                     }
-                     String titolOferta = (String) dataSnapshotAux.child("titolOferta").getValue();
-                     nova.setTitolOferta(titolOferta);
-                     String idNegoci = (String) dataSnapshotAux.child("idNegoci").getValue();
-                     nova.setIdNegoci(idNegoci);
-                     String ubicacioNegoci = (String) dataSnapshotAux.child("ubicacioNegoci").getValue();
-                     nova.setUbicacioNegoci(ubicacioNegoci);
-                     mOfertesData.add(nova);
+                for (DataSnapshot dataSnapshotAuxUsu : dataSnapshot.getChildren()) {
+                    for (DataSnapshot dataSnapshotAux : dataSnapshotAuxUsu.getChildren()) {
+                        Oferta nova = new Oferta();
+                        String descripcioOferta = (String) dataSnapshotAux.child("descripcioOferta").getValue();
+                        nova.setDescripcioOferta(descripcioOferta);
+                        String horariRecogida = (String) dataSnapshotAux.child("horariRecogida").getValue();
+                        nova.setHorariRecogida(horariRecogida);
+                        if (dataSnapshotAux.child("idOferta").getValue() != null) {
+                            long idOferta = (long) dataSnapshotAux.child("idOferta").getValue();
+                            nova.setIdOferta((int) idOferta);
+                        }
+                        String titolOferta = (String) dataSnapshotAux.child("titolOferta").getValue();
+                        nova.setTitolOferta(titolOferta);
+                        String idNegoci = (String) dataSnapshotAux.child("idNegoci").getValue();
+                        nova.setIdNegoci(idNegoci);
+                        String ubicacioNegoci = (String) dataSnapshotAux.child("ubicacioNegoci").getValue();
+                        nova.setUbicacioNegoci(ubicacioNegoci);
+                        mOfertesData.add(nova);
 
-                 }
-                 mAdapter.notifyDataSetChanged();
-             }
+                    }
+                }
+                mAdapter.notifyDataSetChanged();
             }
 
             @Override

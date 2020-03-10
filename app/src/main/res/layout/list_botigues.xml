@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="@string/title_placeholder" />
+            android:text="@string/nomNegoci" />
 
         <TextView
             android:id="@+id/txtDescripcio"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txtNom"
             android:padding="8dp"
-            android:text="@string/horari" />
+            android:text="@string/descripcioNegoci" />
 
         <TextView
             android:id="@+id/txtUbicacioNegoci"
