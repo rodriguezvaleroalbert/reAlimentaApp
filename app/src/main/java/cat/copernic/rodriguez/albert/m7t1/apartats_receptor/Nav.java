@@ -44,7 +44,6 @@ public class Nav extends AppCompatActivity {
         setContentView(R.layout.activity_nav);
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-
         email = findViewById(R.id.txtEmail);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

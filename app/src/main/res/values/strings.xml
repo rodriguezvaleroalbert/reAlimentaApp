@@ -96,4 +96,6 @@
         <item>Receptor</item>
         <item>Donant</item>
     </string-array>
+    <string name="title_activity_tiendas_map">Map</string>
+    <string name="sube_aqui_la_foto_de_la_tienda_donante">Sube aqui la foto de la tienda donante</string>
 </resources>
