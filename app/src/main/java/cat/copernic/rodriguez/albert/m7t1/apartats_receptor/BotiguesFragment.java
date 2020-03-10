@@ -37,7 +37,7 @@ import com.google.firebase.storage.UploadTask;
 import cat.copernic.rodriguez.albert.m7t1.R;
 
 import static android.app.Activity.RESULT_OK;
-
+//Tener encuenta que hay que usar ciertas dependencias
 public class BotiguesFragment extends Fragment {
 //
    /* private GoogleMap mMap;
