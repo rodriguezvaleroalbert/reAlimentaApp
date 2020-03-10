@@ -27,7 +27,7 @@ public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesP
     }
 
     //Necessari per crear el ViewHolder
-//Fa falta crear list_item
+    //Fa falta crear list_item
     @NonNull
     @Override
     public MiraOfertesPropiesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

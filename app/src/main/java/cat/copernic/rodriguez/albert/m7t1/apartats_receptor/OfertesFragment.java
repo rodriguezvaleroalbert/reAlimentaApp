@@ -99,7 +99,9 @@ public class OfertesFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
         });
+
 
 
         /*DROferta.addListenerForSingleValueEvent(new ValueEventListener() {

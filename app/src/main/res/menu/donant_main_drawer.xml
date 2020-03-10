@@ -6,11 +6,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_donant_miraofertespropies"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_send"
             android:title="@string/ofertesPropies" />
         <item
             android:id="@+id/nav_donant_creaoferta"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_send"
             android:title="@string/crea_oferta" />
     </group>
 
@@ -18,7 +18,7 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_send"
                 android:title="@string/Comparteix" />
             <item
                 android:id="@+id/nav_send"

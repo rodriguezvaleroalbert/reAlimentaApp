@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/activity_nav_drawer" />
-        <!-- app:headerLayout="@layout/nav_header_nav" Posar capcelera pròpia-->
+        app:menu="@menu/activity_nav_drawer"
+        app:headerLayout="@layout/nav_header_main" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
