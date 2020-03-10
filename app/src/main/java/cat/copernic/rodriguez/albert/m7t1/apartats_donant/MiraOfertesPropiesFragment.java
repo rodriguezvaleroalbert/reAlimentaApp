@@ -20,7 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
-import cat.copernic.rodriguez.albert.m7t1.classes.MiraOfertesPropiesAdapter;
 import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
 
 public class MiraOfertesPropiesFragment extends Fragment {
@@ -66,13 +65,20 @@ public class MiraOfertesPropiesFragment extends Fragment {
                     nova.setDescripcioOferta(descripcioOferta);
                     String horariRecogida = (String) dataSnapshotAux.child("horariRecogida").getValue();
                     nova.setHorariRecogida(horariRecogida);
-                    if (dataSnapshot.child("idOferta").getValue() != null) {
+                    if (dataSnapshotAux.child("idOferta").getValue() != null) {
                         long idOferta = (long) dataSnapshotAux.child("idOferta").getValue();
+                        System.out.println("El long: " + idOferta);
                         nova.setIdOferta((int) idOferta);
+                    }
+                    else {
+                        System.out.println("Baia");
                     }
                     String titolOferta = (String) dataSnapshotAux.child("titolOferta").getValue();
                     nova.setTitolOferta(titolOferta);
-                    System.out.println(nova.toString());
+                    String idNegoci = (String) dataSnapshotAux.child("idNegoci").getValue();
+                    nova.setIdNegoci(idNegoci);
+                    String ubicacioNegoci = (String) dataSnapshotAux.child("ubicacioNegoci").getValue();
+                    nova.setUbicacioNegoci(ubicacioNegoci);
                     mOfertesData.add(nova);
 
                 }

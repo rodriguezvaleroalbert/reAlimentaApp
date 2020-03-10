@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
 import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
-import cat.copernic.rodriguez.albert.m7t1.classes.OfertesReceptorAdapter;
 
 public class OfertesFragment extends Fragment {
 
@@ -81,13 +80,16 @@ public class OfertesFragment extends Fragment {
                      nova.setDescripcioOferta(descripcioOferta);
                      String horariRecogida = (String) dataSnapshotAux.child("horariRecogida").getValue();
                      nova.setHorariRecogida(horariRecogida);
-                     if (dataSnapshot.child("idOferta").getValue() != null) {
+                     if (dataSnapshotAux.child("idOferta").getValue() != null) {
                          long idOferta = (long) dataSnapshotAux.child("idOferta").getValue();
                          nova.setIdOferta((int) idOferta);
                      }
                      String titolOferta = (String) dataSnapshotAux.child("titolOferta").getValue();
                      nova.setTitolOferta(titolOferta);
-                     System.out.println(nova.toString());
+                     String idNegoci = (String) dataSnapshotAux.child("idNegoci").getValue();
+                     nova.setIdNegoci(idNegoci);
+                     String ubicacioNegoci = (String) dataSnapshotAux.child("ubicacioNegoci").getValue();
+                     nova.setUbicacioNegoci(ubicacioNegoci);
                      mOfertesData.add(nova);
 
                  }

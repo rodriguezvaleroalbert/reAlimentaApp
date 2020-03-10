@@ -22,8 +22,12 @@ public class OfertaConcretaReceptor extends AppCompatActivity {
 
         TextView ofertesTitle = findViewById(R.id.titol);
         TextView ofertesDescripcio = findViewById(R.id.descripcio);
+        TextView ofertesHorari = findViewById(R.id.txtHorari);
+        TextView ofertesUbicacio = findViewById(R.id.txtUbicacioNegoci);
         ofertesTitle.setText(getIntent().getStringExtra("titol"));
         ofertesDescripcio.setText((getIntent().getStringExtra("descripcio")));
+        ofertesHorari.setText((getIntent().getStringExtra("horari")));
+        ofertesUbicacio.setText((getIntent().getStringExtra("ubicacio")));
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

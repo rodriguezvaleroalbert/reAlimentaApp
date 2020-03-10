@@ -76,6 +76,13 @@
     <string name="horari">Horari</string>
     <string name="puja_la_oferta">Puja la oferta</string>
     <string name="logout">logout</string>
+    <string name="nomNegoci">nomNegoci</string>
+    <string name="descripcioNegoci">descripcioNegoci</string>
+    <string name="UbicacioNegoci" />
+    <string name="registreBotiga">Registre de la botiga correcte!</string>
+    <string name="registre_botiga_incorrecte">Registre de la botiga incorrecte.</string>
+    <string name="registre_botiga_correcte" />
+    <string name="modifica_oferta">Modifica oferta</string>
     <!-- Nom indrets -->
     <string-array name="indrets_nom">
         <item>Oferta 1</item>

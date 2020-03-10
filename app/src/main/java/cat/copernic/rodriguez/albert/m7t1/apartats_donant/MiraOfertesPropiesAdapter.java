@@ -1,4 +1,4 @@
-package cat.copernic.rodriguez.albert.m7t1.classes;
+package cat.copernic.rodriguez.albert.m7t1.apartats_donant;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,16 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
-import cat.copernic.rodriguez.albert.m7t1.apartats_receptor.OfertaConcretaReceptor;
+import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
 
-
-public class OfertesReceptorAdapter extends RecyclerView.Adapter<OfertesReceptorAdapter.ViewHolder> {
+public class MiraOfertesPropiesAdapter extends RecyclerView.Adapter<MiraOfertesPropiesAdapter.ViewHolder> {
 
     //Member variables
     private final ArrayList<Oferta> mOfertesData;
     private Context mContext;
 
-    public OfertesReceptorAdapter(Context context, ArrayList<Oferta> ofertesData) {
+    MiraOfertesPropiesAdapter(Context context, ArrayList<Oferta> ofertesData) {
         this.mOfertesData = ofertesData;
         this.mContext = context;
     }
@@ -31,13 +30,13 @@ public class OfertesReceptorAdapter extends RecyclerView.Adapter<OfertesReceptor
     //Fa falta crear list_item
     @NonNull
     @Override
-    public OfertesReceptorAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.list_item, parent, false));
+    public MiraOfertesPropiesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.donant_list_item, parent, false));
     }
 
     //Per donar dades al ViewHolder
     @Override
-    public void onBindViewHolder(OfertesReceptorAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(MiraOfertesPropiesAdapter.ViewHolder holder, int position) {
         //Obtenir l'indret actual
         Oferta currentOferta = mOfertesData.get(position);
         //Omplir els TextView de dades
@@ -80,12 +79,17 @@ public class OfertesReceptorAdapter extends RecyclerView.Adapter<OfertesReceptor
         @Override
         public void onClick(View view) {
             Oferta currentOferta = mOfertesData.get(getAdapterPosition());
-            Intent detailIntent = new Intent(mContext, OfertaConcretaReceptor.class);
+            Intent detailIntent = new Intent(mContext, OfertaConcretaDonant.class);
             detailIntent.putExtra("titol", currentOferta.getTitolOferta());
             detailIntent.putExtra("descripcio", currentOferta.getDescripcioOferta());
+            detailIntent.putExtra("horari", currentOferta.getHorariRecogida());
+            detailIntent.putExtra("ubicacio", currentOferta.getUbicacioNegoci());
+            detailIntent.putExtra("posicio", currentOferta.getIdOferta());
+            System.out.println(detailIntent.putExtra("posicio", currentOferta.getIdOferta()));
+            System.out.println("La posició a l'adapter és: " + currentOferta.getIdOferta());
+            System.out.println("Adapter: " + currentOferta.toString());
             mContext.startActivity(detailIntent);
         }
     }
-
 }
 
