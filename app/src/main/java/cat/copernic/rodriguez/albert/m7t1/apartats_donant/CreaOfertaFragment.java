@@ -26,7 +26,7 @@ import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
 public class CreaOfertaFragment extends Fragment {
     private EditText mNom, mDescripcio, mHorari;
     private FirebaseAuth mAuth;
-
+//
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_creaoferta, container, false);
