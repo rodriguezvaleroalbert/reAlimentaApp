@@ -22,7 +22,7 @@ import java.util.Objects;
 
 import cat.copernic.rodriguez.albert.m7t1.R;
 import cat.copernic.rodriguez.albert.m7t1.classes.Oferta;
-
+//
 public class CreaOfertaFragment extends Fragment {
     private EditText mNom, mDescripcio, mHorari;
     private FirebaseAuth mAuth;
