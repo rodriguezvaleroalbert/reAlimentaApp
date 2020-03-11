@@ -12,7 +12,6 @@ import cat.copernic.rodriguez.albert.m7t1.R;
 
 public class ShareFragment extends Fragment {
 
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_share, container, false);

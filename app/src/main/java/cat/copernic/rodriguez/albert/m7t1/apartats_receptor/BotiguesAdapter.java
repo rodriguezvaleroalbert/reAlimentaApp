@@ -94,4 +94,3 @@ public class BotiguesAdapter extends RecyclerView.Adapter<BotiguesAdapter.ViewHo
         }
     }
 }
-

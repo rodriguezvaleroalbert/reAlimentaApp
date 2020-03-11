@@ -76,4 +76,10 @@
     <string name="sube_foto">Sube foto</string>
     <string name="fotografia">Foto</string>
     <string name="escollirTipusUsuari">Escoje tipo de usuario</string>
+    <string name="Signa">Firma la petición para que no se tire la comida sobrante de las tienda!</string>
+    <string name="signa_btn">Firma</string>
+    <string name="fotos">Fotos</string>
+    <string name="foto">Foto</string>
+    <string name="explicaci">Esperamos que disfrutes de nuestra app. Como ya habrás visto, nosotros no pedimos donaciones ni ninguna otra forma de contribución a nuestro proyecto además de hacer un buen uso. pero si tienes ganas de colaborar, ayúdanos firmando esta petición para crear una ley que acabe con el lanzamiento de toneladas de comida al día.</string>
+    <string name="introdueix_les_dades_de_la_botiga_i_el_teu_comentari">Introduce los datos de tu tienda y tu comentario</string>
 </resources>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,6 +19,11 @@ import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -31,46 +37,52 @@ public class SendFragment extends Fragment {
     private static final int GALLERY_INTENT = 1;
     private ImageView mImageview;
     private ProgressDialog mProgressDialog;
+    private EditText mComentari;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_send, container, false);
 
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
         mStorage = FirebaseStorage.getInstance().getReference();
-        //
-        /* private GoogleMap mMap;
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        return inflater.inflate(R.layout.fragment_botigues, container, false);
-    }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-    } */
         Button mSubir = root.findViewById(R.id.btnSubir);
         mImageview = root.findViewById(R.id.ivImg1);
+        mComentari = root.findViewById(R.id.editText);
         mProgressDialog = new ProgressDialog(getActivity());
 
 
         mSubir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final DatabaseReference DRComentaris = database.getReference("Ofertes/");
+                DRComentaris.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.getValue() != null){
+                            int posicio = (int) dataSnapshot.getChildrenCount();
+                            String comentari = mComentari.getText().toString().trim();
+                            DatabaseReference DRComentari = database.getReference("Comentaris/"+posicio);
+                            DRComentari.setValue(comentari);
 
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent, GALLERY_INTENT);
+                        }
+                        else{
+                            int posicio = 0;
+                            String comentari = mComentari.getText().toString().trim();
+                            DatabaseReference DRComentari = database.getReference("Comentaris/"+posicio);
+                            DRComentari.setValue(comentari);
+                        }
+                        Intent intent = new Intent(Intent.ACTION_PICK);
+                        intent.setType("image/*");
+                        startActivityForResult(intent, GALLERY_INTENT);
+                        System.out.println("Fet");
+                    }
 
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                    }
+                });
             }
         });
         return root;

@@ -30,13 +30,13 @@
         tools:layout="@layout/fragment_tools" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.ShareFragment"
-        android:label="@string/Comparteix"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_change"
+        android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.Change"
+        android:label="@string/Change"
+        tools:layout="@layout/change" />
 
     <fragment
-        android:id="@+id/nav_send"
+        android:id="@+id/nav_fotos"
         android:name="cat.copernic.rodriguez.albert.m7t1.apartats_receptor.SendFragment"
         android:label="@string/Envia"
         tools:layout="@layout/fragment_send" />
