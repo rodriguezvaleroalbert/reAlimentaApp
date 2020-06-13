@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "171141432349",
+    "firebase_url": "https://realimenta-81086.firebaseio.com",
+    "project_id": "realimenta-81086",
+    "storage_bucket": "realimenta-81086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171141432349:android:2298d9915749f2a47fb2f4",
+        "android_client_info": {
+          "package_name": "cat.copernic.rodriguez.albert.m7t1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171141432349-f6r5dcq44c5sfgpgeg0dkuosd99e8kvd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cat.copernic.rodriguez.albert.m7t1",
+            "certificate_hash": "a80a312ab02bf4afc32fa66b89db4e5cb0a42fde"
+          }
+        },
+        {
+          "client_id": "171141432349-tadbfhv2i5nb79j1tou6fl8t23uq015o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwGvBCIu3s9aQMqKFXicQITetJgFRAGp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171141432349-tadbfhv2i5nb79j1tou6fl8t23uq015o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
