@@ -54,7 +54,7 @@
     <string name="LoginCorrecte">Login correcto</string>
     <string name="escollirOpcio">Tienes que escojer un tipo de usuario</string>
     <string name="introduirTotsElsCamps">Tienes que introducir todos los campos</string>
-    <string name="creaOferta">Crear oferta</string>
+    <string name="creaOferta">Crear  la oferta</string>
     <string name="miraOfertesPropies">Mirar ofertas propias</string>
     <string name="Donant">Donante</string>
     <string name="ofertesPropies">Mirar ofertas propias</string>
@@ -82,4 +82,8 @@
     <string name="foto">Foto</string>
     <string name="explicaci">Esperamos que disfrutes de nuestra app. Como ya habrás visto, nosotros no pedimos donaciones ni ninguna otra forma de contribución a nuestro proyecto además de hacer un buen uso. pero si tienes ganas de colaborar, ayúdanos firmando esta petición para crear una ley que acabe con el lanzamiento de toneladas de comida al día.</string>
     <string name="introdueix_les_dades_de_la_botiga_i_el_teu_comentari">Introduce los datos de tu tienda y tu comentario</string>
+    <string name="descripcio2">Descripción</string>
+    <string name="t_tol_oferta">Título oferta</string>
+    <string name="descripci_oferta">Descripción oferta</string>
+    <string name="horari_oferta">Horario oferta</string>
 </resources>

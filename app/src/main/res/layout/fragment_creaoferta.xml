@@ -34,14 +34,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="19dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtEtiquetaTitol"
         app:layout_constraintTop_toBottomOf="@+id/txtTitolCreaOferta"
-        android:autofillHints=""
         tools:ignore="LabelFor"
-        tools:targetApi="o" />
+        tools:targetApi="o"
+        android:hint="@string/t_tol_oferta"/>
 
     <TextView
         android:id="@+id/txtEtiquetaDescripcio"
@@ -59,15 +61,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="19dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtEtiquetaDescripcio"
         app:layout_constraintTop_toBottomOf="@+id/etTtolOferta"
-        android:autofillHints=""
         tools:ignore="LabelFor"
-        tools:targetApi="o" />
+        tools:targetApi="o"
+        android:hint="@string/descripci_oferta"/>
 
     <TextView
         android:id="@+id/txtEtiquetaHorari"
@@ -86,15 +90,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="19dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtEtiquetaHorari"
         app:layout_constraintTop_toBottomOf="@+id/etDescripcioOferta"
-        android:autofillHints=""
         tools:ignore="LabelFor"
-        tools:targetApi="o" />
+        tools:targetApi="o"
+        android:hint="@string/horari_oferta"/>
 
     <Button
         android:id="@+id/btnPuja"

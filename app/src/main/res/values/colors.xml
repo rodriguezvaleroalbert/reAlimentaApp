@@ -3,13 +3,17 @@
     <!-- Color línia TextField email i contrasenya-->
     <color name="colorPrimary">#008577</color>
     <!-- Color botons inici i NavBar-->
-    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
     <!-- Color text concrets-->
-    <color name="colorPrimaryTextColor">#0D47A1</color>
+    <color name="colorPrimaryTextColor">#3F51B5</color>
     <!-- Color app bar i header del Navigation bar-->
     <color name="colorAccent">#2196F3</color>
     <!-- Altres color textos -->
-    <color name="colorSecondaryTextColor">#9575CD</color>
+    <color name="colorSecondaryTextColor">#7C4DFF</color>
     <!-- Més colors de fons -->
     <color name="colorBackgroundSecondary">#80D8FF</color>
+    <!-- Color barra títol -->
+    <color name="colorTitleBar">#FFFFFF</color>
+    <!-- Color negre -->
+    <color name="colorBlack">#000000</color>
 </resources>

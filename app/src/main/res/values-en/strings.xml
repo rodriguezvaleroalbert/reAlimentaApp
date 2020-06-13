@@ -55,7 +55,7 @@
     <string name="escollirOpcio">You have to choose a user type</string>
     <string name="introduirTotsElsCamps">You have to introduce all the camps</string>
     <string name="escollirTipusUsuari">Choose user type</string>
-    <string name="creaOferta">Make offer</string>
+    <string name="creaOferta">Make the offer</string>
     <string name="miraOfertesPropies">See own offers</string>
     <string name="Donant">Giver</string>
     <string name="ofertesPropies">See own offers</string>
@@ -82,4 +82,8 @@
     <string name="signa_btn">Sign!</string>
     <string name="explicaci">We hope you enjoy our app. As you can see, we do not ask for donations no other form of contribution to our project besides making good use of it. But If you feel like collaborating, please help us by signing this petition to create a law to finish launching tons of food a day.</string>
     <string name="introdueix_les_dades_de_la_botiga_i_el_teu_comentari">Put the dates and your comment</string>
+    <string name="descripcio2">Description</string>
+    <string name="t_tol_oferta">Offer title</string>
+    <string name="descripci_oferta">Offer description</string>
+    <string name="horari_oferta">Offer timetable</string>
 </resources>

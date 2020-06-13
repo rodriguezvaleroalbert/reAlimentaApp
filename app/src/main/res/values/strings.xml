@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Nom de l'app -->
     <string name="app_name">reAlimenta</string>
     <!-- Navigation bar -->
@@ -66,7 +66,7 @@
     <string name="LoginCorrecte">Login correcte</string>
     <string name="escollirOpcio">S\'ha d\'escollir una tipus d\'usuari</string>
     <string name="introduirTotsElsCamps">Has d\'introduïr tots els camps.</string>
-    <string name="creaOferta">Crea Oferta</string>
+    <string name="creaOferta">Crea la Oferta</string>
     <string name="miraOfertesPropies">Mira ofertes pròpies</string>
     <string name="Donant">donant</string>
     <string name="ofertesPropies">Mira ofertes pròpies</string>
@@ -111,9 +111,13 @@
     <string name="fotos">Fotos</string>
     <string name="foto">Foto</string>
     <string name="Signa">Signa la petició perquè no es llenci el menjar sobrant de les botigues!</string>
-    <string name="explicaci">Esperem que gaudeixis de la nostra app. Com ja hauràs vist, nosaltres no demanem donacions ni cap altra forma de contribució al nostre projecte a més a més de fer-ne un bon ús. Però  si tens ganes de col·laborar, ajuda\'ns signant aquesta petició per tal de crear una llei que acabi amb el llançament de tones de menjar al dia.</string>
+    <string name="explicaci" tools:ignore="Typos">Esperem que gaudeixis de la nostra app. Com ja hauràs vist, nosaltres no demanem donacions ni cap altra forma de contribució al nostre projecte a més a més de fer-ne un bon ús. Però  si tens ganes de col·laborar, ajuda\'ns signant aquesta petició per tal de crear una llei que acabi amb el llançament de tones de menjar al dia.</string>
     <string name="signa_btn">Signa!</string>
     <string name="Enllaç" translatable="false">https://www.change.org/p/comisi%C3%B3n-europea-obliguen-a-los-supermercados-a-donar-toda-la-comida-que-le-sobra-a-entidades-sociales-y-ongs-lacomidanosetira</string>
     <string name="Change" translatable="false">Change</string>
     <string name="introdueix_les_dades_de_la_botiga_i_el_teu_comentari">Introdueix les dades de la botiga i el teu comentari.</string>
+    <string name="descripcio2">Descripcio</string>
+    <string name="t_tol_oferta">Títol oferta</string>
+    <string name="descripci_oferta">Descripció oferta</string>
+    <string name="horari_oferta">Horari oferta</string>
 </resources>

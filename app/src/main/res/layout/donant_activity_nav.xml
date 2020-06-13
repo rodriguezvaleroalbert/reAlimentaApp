@@ -18,9 +18,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorSecondaryTextColor"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
+        app:itemTextColor="@color/colorTitleBar"
         app:menu="@menu/donant_main_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
